@@ -1,0 +1,23 @@
+---
+const {
+  title,
+  paragraph,
+  align = "center", // left | center | right
+} = Astro.props;
+
+const alignment = {
+  left: "text-left",
+  center: "text-center",
+  right: "text-right",
+};
+---
+
+<div class={`mx-auto max-w-3xl ${alignment[align]}`}>
+  <h2 class="text-3xl font-bold text-gray-900 md:text-4xl">
+    {title}
+  </h2>
+
+  <p class="mt-4 text-lg leading-relaxed text-gray-600">
+    {paragraph}
+  </p>
+</div>

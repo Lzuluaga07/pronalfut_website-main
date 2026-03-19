@@ -1,0 +1,88 @@
+---
+import '../styles/global.css';
+import Navbar from "../components/Navbar.astro";
+import TextBlock from "../components/TextBlock.astro";
+import TestimonialCarousel from "../components/TestimonialCarousel.astro";
+
+const testimonials = [
+  {
+    quote:
+      "Alimentos SAS superó nuestras expectativas. Compramos un cargamento grande de pulpa de fruta para nuestra cadena de restaurantes, y la calidad es insuperable. La entrega fue puntual y el servicio al cliente impecable. Sin duda, seguiremos trabajando con ellos.",
+    author: "LOLA MILES",
+    rating: 5,
+    image: "/images/testimonio-1.jpg",
+  },
+  {
+    quote:
+      "La calidad del producto y la puntualidad en la entrega fueron excelentes. Nuestro negocio pudo operar con total tranquilidad gracias a su cumplimiento.",
+    author: "JUAN PÉREZ",
+    rating: 5,
+    image: "/images/testimonio-2.jpg",
+  },
+  {
+    quote:
+      "Muy buena atención y una pulpa de fruta con sabor realmente natural. Se nota el cuidado en todo el proceso.",
+    author: "ANA GARCÍA",
+    rating: 5,
+    image: "/images/testimonio-3.jpg",
+  },
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		
+	<Navbar logoText="Pronalfrut" whatsappLink="https://wa.me/573001234567" />
+	<Navbar logoText="Daniel" whatsappLink="https://wa.me/573001234567" />
+	<Navbar logoText="Luis" whatsappLink="https://wa.me/573001234567" />
+	<Navbar logoText="Pronalfrut" whatsappLink="https://wa.me/573001234567" />
+	<Navbar logoText="Pronalfrut" whatsappLink="https://wa.me/573001234567" />
+
+
+	<TextBlock
+    title="nosotros"
+    paragraph="somos unsa empredsa de bla blas"
+    align="center"
+  />
+
+  <TextBlock
+    title="Pulpa de fruta 100% natural"
+    paragraph="Ofrecemos pulpas de fruta sin conservantes, ideales para negocios que buscan calidad, frescura y sabor auténtico."
+    align="center"
+  />
+
+  <TextBlock
+    title="Pulpa de fruta 100% natural"
+    paragraph="Ofrecemos pulpas de fruta sin conservantes, ideales para negocios que buscan calidad, frescura y sabor auténtico."
+    align="center"
+  />
+
+  <TestimonialCarousel testimonials={testimonials} />
+
+  
+	<section id="inicio" class="px-6 py-20">
+	<h1 class="text-5xl font-bold">Landing Page</h1>
+	</section>
+
+	<section id="productos" class="px-6 py-20">
+	<h2 class="text-3xl font-bold">Productos</h2>
+	</section>
+
+	<section id="nosotros" class="px-6 py-20">
+	<h2 class="text-3xl font-bold">Nosotros</h2>
+	</section>
+
+	<section id="contacto" class="px-6 py-20">
+	<h2 class="text-3xl font-bold">Contacto</h2>
+	</section>
+
+	</body>
+</html>
