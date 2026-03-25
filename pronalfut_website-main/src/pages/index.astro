@@ -39,20 +39,32 @@ const testimonials = [
 		<title>Astro</title>
 	</head>
 	<body>
-		
+		<body>
+  <Navbar /> 
+
+  <main>
+    <section class="text-center py-10">
+      <h1 class="text-4xl font-bold text-green-700">
+        Pulpa de fruta 100% natural
+      </h1>
+      <p class="text-lg text-gray-600">
+        Ofrecemos pulpas sin conservantes para negocios que buscan calidad.
+      </p>
+    </section>
+
+    <TextBlock />
+    <TestimonialCarousel testimonials={testimonials} />
+  </main>
+</body>
 	<Navbar logoText="Pronalfrut" whatsappLink="https://wa.me/573001234567" />
 	
 	<TextBlock
-    title="nosotros"
+    title="Nosotros"
     paragraph="somos  una empresa líder en el mercado colombiano dedicada al procesamiento y conservación de alimentos. Con una larga trayectoria y una alta satisfacción general de los clientes, la empresa se compromete con la calidad y la seguridad de sus productos. Si buscas una empresa colaboradora y comprometida con la sostenibilidad, ALIMENTOS PRONALFRUT SAS es una excelente opción."
     align="center"
   />
 
-  <TextBlock
-    title="Pulpa de fruta 100% natural"
-    paragraph="Ofrecemos pulpas de fruta sin conservantes, ideales para negocios que buscan calidad, frescura y sabor auténtico."
-    align="center"
-  />
+
 
   <TestimonialCarousel testimonials={testimonials} />
 
