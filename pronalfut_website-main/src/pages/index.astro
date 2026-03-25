@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import TextBlock from "../components/TextBlock.astro";
 import TestimonialCarousel from "../components/TestimonialCarousel.astro";
@@ -10,80 +10,74 @@ const testimonials = [
       "Alimentos Pronalfrut superó nuestras expectativas. Compramos un cargamento grande de pulpa de fruta para nuestra cadena de restaurantes, y la calidad es insuperable.",
     author: "CLIENTE SATISFECHO",
     rating: 5,
-    image: "/images/testimonio-1.jpg",
+    image: "/images/testimonio-1.webp",
   },
   {
     quote:
       "La calidad del producto y la puntualidad en la entrega fueron excelentes. Nuestro negocio pudo operar con total tranquilidad gracias a su cumplimiento.",
     author: "JUAN PÉREZ",
     rating: 5,
-    image: "/images/testimonio-2.jpg",
+    image: "/images/testimonio-2.webp",
   },
   {
     quote:
       "Muy buena atención y una pulpa de fruta con sabor realmente natural. Se nota el cuidado en todo el proceso.",
     author: "ANA GARCÍA",
     rating: 5,
-    image: "/images/testimonio-3.jpg",
+    image: "/images/testimonio-3.webp",
   },
 ];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<body>
-  <Navbar /> 
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Alimentos Pronalfrut | Pulpa de fruta 100% natural</title>
+    <meta
+      name="description"
+      content="Pulpas de fruta 100% naturales para negocios que buscan calidad. Sin conservantes y sabor real."
+    />
+  </head>
+  <body>
+    <Navbar logoText="Pronalfrut" whatsappLink="https://wa.me/573001234567" />
 
-  <main>
-    <section class="text-center py-10">
-      <h1 class="text-4xl font-bold text-green-700">
-        Pulpa de fruta 100% natural
-      </h1>
-      <p class="text-lg text-gray-600">
-        Ofrecemos pulpas sin conservantes para negocios que buscan calidad.
-      </p>
-    </section>
+    <main>
+      <section class="text-center py-10 px-4">
+        <h1 class="text-3xl md:text-5xl font-bold text-green-700">
+          Pulpa de fruta 100% natural
+        </h1>
+        <p class="pb-8 mb-8 border-2 border-solid text-lg md:text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
+          Ofrecemos pulpas sin conservantes para negocios que buscan calidad.
+        </p>
+      </section>
 
-    <TextBlock />
-    <TestimonialCarousel testimonials={testimonials} />
-  </main>
-</body>
-	<Navbar logoText="Pronalfrut" whatsappLink="https://wa.me/573001234567" />
-	
-	<TextBlock
-    title="Nosotros"
-    paragraph="somos  una empresa líder en el mercado colombiano dedicada al procesamiento y conservación de alimentos. Con una larga trayectoria y una alta satisfacción general de los clientes, la empresa se compromete con la calidad y la seguridad de sus productos. Si buscas una empresa colaboradora y comprometida con la sostenibilidad, ALIMENTOS PRONALFRUT SAS es una excelente opción."
-    align="center"
-  />
+      <TextBlock
+        title="Nosotros"
+        paragraph="Somos líderes en Colombia en el procesamiento y conservación de alimentos. Con una larga trayectoria, ALIMENTOS PRONALFRUT SAS garantiza calidad, seguridad y sostenibilidad en cada uno de sus productos de pulpa de fruta."
+        align="center"
+      />
 
+      <TestimonialCarousel testimonials={testimonials} />
 
+      <section id="inicio" class="px-6 py-20">
+        <h1 class="text-5xl font-bold">Landing Page</h1>
+      </section>
 
-  <TestimonialCarousel testimonials={testimonials} />
+      <section id="productos" class="px-6 py-20">
+        <h2 class="text-3xl font-bold">Productos</h2>
+      </section>
 
-  
-	<section id="inicio" class="px-6 py-20">
-	<h1 class="text-5xl font-bold">Landing Page</h1>
-	</section>
+      <section id="nosotros" class="px-6 py-20">
+        <h2 class="text-3xl font-bold">Nosotros</h2>
+      </section>
 
-	<section id="productos" class="px-6 py-20">
-	<h2 class="text-3xl font-bold">Productos</h2>
-	</section>
-
-	<section id="nosotros" class="px-6 py-20">
-	<h2 class="text-3xl font-bold">Nosotros</h2>
-	</section>
-
-	<section id="contacto" class="px-6 py-20">
-	<h2 class="text-3xl font-bold">Contacto</h2>
-	</section>
-
-	</body>
+      <section id="contacto" class="px-6 py-20">
+        <h2 class="text-3xl font-bold">Contacto</h2>
+      </section>
+    </main>
+  </body>
 </html>
