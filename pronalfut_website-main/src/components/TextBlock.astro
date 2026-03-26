@@ -1,9 +1,15 @@
 ---
-const {
-  title,
-  paragraph,
+interface Props {
+  title: string;
+  paragraph: string;
+  align?: "left" | "center" | "right";
+}
+
+const { 
+  title, 
+  paragraph, 
   align = "center", // left | center | right
-} = Astro.props;
+} = Astro.props as Props;
 
 const alignment = {
   left: "text-left",
@@ -21,3 +27,4 @@ const alignment = {
     {paragraph}
   </p>
 </div>
+

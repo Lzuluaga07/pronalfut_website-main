@@ -1,4 +1,15 @@
 ---
+interface Testimonial {
+  quote: string;
+  author: string;
+  rating: number;
+  image: string;
+}
+
+interface Props {
+  title?: string;
+  testimonials?: Testimonial[];
+}
 const {
   title = "Testimonios",
   testimonials = [
