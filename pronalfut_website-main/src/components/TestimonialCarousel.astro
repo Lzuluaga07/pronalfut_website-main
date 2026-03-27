@@ -141,7 +141,8 @@ const {
   const carousels = document.querySelectorAll("[data-carousel]");
 
   carousels.forEach((carousel) => {
-    const track = carousel.querySelector("[data-track]");
+    // Usamos <HTMLElement> para que reconozca la propiedad .style más adelante
+    const track = carousel.querySelector<HTMLElement>("[data-track]");
     const slides = carousel.querySelectorAll("[data-slide]");
     const dots = carousel.querySelectorAll("[data-dot]");
     const prev = carousel.querySelector("[data-prev]");
@@ -149,10 +150,12 @@ const {
     const total = slides.length;
 
     let current = 0;
-    let interval;
+    // Definimos que interval puede ser un número o undefined
+    let interval: number | undefined;
 
     const render = () => {
       if (!track) return;
+      // Ahora TS sabe que track tiene .style gracias al tipado de arriba
       track.style.transform = `translateX(-${current * 100}%)`;
 
       slides.forEach((slide, index) => {
@@ -165,14 +168,15 @@ const {
       });
     };
 
-    const goTo = (index) => {
+    // Especificamos que index es un number
+    const goTo = (index: number) => {
       current = (index + total) % total;
       render();
     };
 
     const startAuto = () => {
       stopAuto();
-      interval = setInterval(() => {
+      interval = window.setInterval(() => {
         goTo(current + 1);
       }, 5000);
     };
@@ -206,3 +210,4 @@ const {
     startAuto();
   });
 </script>
+
