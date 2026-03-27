@@ -1,0 +1,49 @@
+---
+// EPIC 3: Estructura modular y profesional para el pie de página [cite: 18, 19]
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-green-900 text-white py-12">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+    
+    <div class="space-y-4">
+      <h3 class="text-2xl font-bold text-green-400">Alimentos Pronalfrut</h3>
+      <p class="text-sm text-gray-300">
+        NIT: 900436915
+      </p>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        Comprometidos con la calidad natural y el procesamiento de los mejores frutos del campo.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      <h3 class="text-xl font-bold">Navegación</h3>
+      <ul class="space-y-2 text-gray-300 text-sm">
+        <li><a href="/" class="hover:text-green-400 transition-colors">Inicio</a></li>
+        <li><a href="#productos" class="hover:text-green-400 transition-colors">Productos</a></li>
+        <li><a href="#testimonios" class="hover:text-green-400 transition-colors">Testimonios</a></li>
+      </ul>
+    </div>
+
+    <div class="space-y-4">
+      <h3 class="text-xl font-bold">Contacto</h3>
+      <div class="flex items-start gap-2 text-gray-300 text-sm">
+        <span class="material-icons text-green-400">place</span>
+        <p>Carrera 64A # 4B-41, Bogotá, Colombia</p>
+      </div>
+      <div class="flex items-center gap-2 text-gray-300 text-sm">
+        <span class="material-icons text-green-400">phone</span>
+        <p>Teléfono Fijo: 420-27-30</p>
+      </div>
+      <div class="flex items-center gap-2 text-gray-300 text-sm">
+        <span class="material-icons text-green-400">email</span>
+        <p>contacto@pronalfrut.com</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-green-800 mt-10 pt-6 text-center text-gray-400 text-xs">
+    <p>&copy; {currentYear} Alimentos Pronalfrut. Todos los derechos reservados.</p>
+  </div>
+</footer>
