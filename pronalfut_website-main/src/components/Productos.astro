@@ -11,21 +11,17 @@ const productos = [
     descripcion: "Seleccionada y procesada con los más altos estándares de calidad.",
     imagen: "/productos/congelados.webp",
   },
-  {
-    nombre: "Mermeladas Artesanales",
-    descripcion: "El sabor auténtico de la fruta en cada bocado.",
-    imagen: "/productos/mermeladas.webp",
-  }
+
 ];
 ---
 
 <section id="productos" class="py-16 bg-gray-50">
-  <div class="container mx-auto px-6">
+  <div class="container mx-auto px-6 max-w-6xl"></div>
     <h2 class="text-3xl md:text-4xl font-bold text-center text-green-800 mb-12">
       Nuestros Productos
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center"></div>
       {productos.map((producto) => (
         <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <img 
@@ -45,3 +41,4 @@ const productos = [
     </div>
   </div>
 </section>
+

@@ -3,6 +3,15 @@ import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import TextBlock from "../components/TextBlock.astro";
 import TestimonialCarousel from "../components/TestimonialCarousel.astro";
+import Hero from "../components/Hero.astro";
+import Productos from "../components/Productos.astro";
+import Footer from "../components/Footer.astro";
+
+// Datos para el "Emisor"
+const heroTitle = "Pulpas de Fruta 100% Naturales";
+const heroSubtitle = "Sabor real y frescura del campo para tu negocio, procesado con los más altos estándares de calidad.";
+const heroImage = "/images/hero-bg.webp"; // Asegúrate de que el archivo exista en public/images/
+
 
 const testimonials = [
   {
@@ -42,42 +51,36 @@ const testimonials = [
       content="Pulpas de fruta 100% naturales para negocios que buscan calidad. Sin conservantes y sabor real."
     />
   </head>
-  <body>
-    <Navbar logoText="Pronalfrut" whatsappLink="https://wa.me/573001234567" />
+ <body>
+  <Navbar logoText="Pronalfrut" whatsappLink="https://wa.me/573001234567" />
 
-    <main>
-      <section class="text-center py-10 px-4">
-        <h1 class="text-3xl md:text-5xl font-bold text-green-700">
-          Pulpa de fruta 100% natural
-        </h1>
-        <p class="pb-8 mb-8 border-2 border-solid text-lg md:text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
-          Ofrecemos pulpas sin conservantes para negocios que buscan calidad.
-        </p>
-      </section>
+  <main>
+   <Hero 
+  title="Alimentos Pronalfrut" 
+  subtitle="Pulpa de fruta 100% natural, sabor real y frescura para tu negocio." 
+  imageWebp="/images/hero-pronalfrut.jpeg"
+ 
+/>
 
+    <section id="nosotros" class="py-10">
       <TextBlock
         title="Nosotros"
-        paragraph="Somos líderes en Colombia en el procesamiento y conservación de alimentos. Con una larga trayectoria, ALIMENTOS PRONALFRUT SAS garantiza calidad, seguridad y sostenibilidad en cada uno de sus productos de pulpa de fruta."
+        paragraph="Somos líderes en Colombia en el procesamiento y conservación de alimentos..."
         align="center"
       />
+    </section>
 
+    <section id="productos">
+      <Productos />
+    </section>
+
+    <section id="testimonios">
       <TestimonialCarousel testimonials={testimonials} />
+    </section>
+  </main>
 
-      <section id="inicio" class="px-6 py-20">
-        <h1 class="text-5xl font-bold">Landing Page</h1>
-      </section>
-
-      <section id="productos" class="px-6 py-20">
-        <h2 class="text-3xl font-bold">Productos</h2>
-      </section>
-
-      <section id="nosotros" class="px-6 py-20">
-        <h2 class="text-3xl font-bold">Nosotros</h2>
-      </section>
-
-      <section id="contacto" class="px-6 py-20">
-        <h2 class="text-3xl font-bold">Contacto</h2>
-      </section>
-    </main>
-  </body>
+  <Footer />
+</body>
 </html>
+
+
