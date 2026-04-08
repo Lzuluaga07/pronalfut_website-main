@@ -8,7 +8,7 @@ interface Props {
 const { 
   title, 
   paragraph, 
-  align = "center", // left | center | right
+  align = "center",
 } = Astro.props as Props;
 
 const alignment = {
@@ -18,13 +18,20 @@ const alignment = {
 };
 ---
 
-<div class={`mx-auto max-w-3xl ${alignment[align]}`}>
-  <h2 class="text-3xl font-bold text-gray-900 md:text-4xl">
-    {title}
-  </h2>
+<section class="py-16 px-4 bg-white">
+  <div class={`mx-auto max-w-4xl ${alignment[align]}`}>
+    <h2 class="text-3xl font-bold text-green-800 md:text-5xl mb-6 tracking-tight">
+      {title}
+    </h2>
 
-  <p class="mt-4 text-lg leading-relaxed text-gray-600">
-    {paragraph}
-  </p>
-</div>
+    {align === "center" && (
+      <div class="w-20 h-1 bg-orange-500 mx-auto mb-8 rounded-full"></div>
+    )}
+
+    <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-pretty">
+      {paragraph}
+    </p>
+  </div>
+</section>
+
 
