@@ -17,7 +17,11 @@ import productosData from '../data/productos.json';
   {
     productosData && Array.isArray(productosData) ? (
       productosData.map((producto) => (
-        <ProductCard   producto={producto} client:load />
+      <ProductCard 
+  producto={producto} 
+  imagenOptimizada={producto.id === 1 ? naranjaImg.src : undefined} 
+  client:load 
+/>
       ))
     ) : (
       <p class="text-center col-span-full">Cargando productos...</p>
