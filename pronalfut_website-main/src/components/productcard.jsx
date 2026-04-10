@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function ProductCard({ producto, imagenOptimizada = null }) {
+export default function ProductCard({ producto, imagenOptimizada }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
