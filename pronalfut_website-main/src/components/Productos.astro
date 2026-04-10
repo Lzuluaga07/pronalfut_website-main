@@ -1,5 +1,6 @@
 ---
 import naranjaImg from '../assets/naranja.webp';
+import guanabanaImg from '../assets/guanabana.webp'; 
 import ProductCard from './productcard.jsx'; 
 import productosData from '../data/productos.json';
 ---
@@ -16,7 +17,11 @@ import productosData from '../data/productos.json';
           productosData.map((producto) => (
             <ProductCard 
               producto={producto} 
-              imagenOptimizada={producto.id === 1 ? naranjaImg.src : undefined}
+              imagenOptimizada={
+                producto.id === 1 ? naranjaImg.src : 
+                producto.id === 2 ? guanabanaImg.src : 
+                undefined
+              } 
               client:load 
             />
           ))
@@ -27,3 +32,4 @@ import productosData from '../data/productos.json';
     </div>
   </div>
 </section>
+
