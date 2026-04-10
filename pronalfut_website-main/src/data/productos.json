@@ -3,7 +3,7 @@
     "id": 1,
     "nombre": "Pulpa de Fruta",
     "propiedades": "Alta en Vitamina C, antioxidante y fortalece el sistema inmunológico.",
-    "imagen": "/images/naranja.jpg",
+    "imagen": "../assets/naranja.webp",
     "remedio": "Infusión de cáscara con miel para aliviar la tos y la congestión."
   },
   {

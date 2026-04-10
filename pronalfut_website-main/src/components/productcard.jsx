@@ -1,14 +1,22 @@
 import { useState } from 'react';
 
-export default function ProductCard({ producto }) {
+export default function ProductCard({ producto, imagenOptimizada }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all p-5 flex flex-col h-full">
-      {/* Icono o Imagen */}
-      <div className="bg-orange-50 w-16 h-16 rounded-full flex items-center justify-center mb-4 text-2xl">
-        {producto.nombre.includes('Naranja') ? '🍊' : '❄️'}
-      </div>
+      {/* Imagen del Producto */}
+<div className="relative h-64 w-full overflow-hidden rounded-t-xl mb-4">
+  <img
+   src={imagenOptimizada || producto.imagen}
+    alt={producto.nombre} 
+    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+  />
+  {/* El ícono queda como un detalle flotante elegante */}
+  <div className="absolute top-3 right-3 bg-white/90 p-2 rounded-full shadow-md text-xl">
+    {producto.nombre.includes('Naranja') ? '🍊' : '❄️'}
+  </div>
+</div>
 
       <h3 className="text-xl font-bold text-gray-800 mb-1">{producto.nombre}</h3>
       <p className="text-gray-500 text-sm mb-4">Alimentos Pronalfrut</p>

@@ -1,15 +1,18 @@
 ---
-const { 
-  title = "Alimentos Pronalfrut", 
-  subtitle = "Pulpas de fruta 100% naturales", 
-  imageWebp = "/images/hero-bg.webp" 
+// 1. Importamos las imágenes
+import pulpaImg from '../assets/pulpa.webp';
+import naranjaImg from '../assets/naranja.webp';
+
+// 2. Definimos los props (solo una vez)
+const {
+  title = "Alimentos Pronalfrut",
+  subtitle = "Pulpas de fruta 100% naturales",
 } = Astro.props;
 ---
-
 <section class="relative h-[80vh] flex items-center justify-center overflow-hidden bg-gray-900">
   <div class="absolute inset-0 z-0">
     <img 
-      src={imageWebp} 
+      src={pulpaImg.src}
       alt="Imagen principal de Alimentos Pronalfrut" 
       class="w-full h-full object-cover opacity-60"
     />
