@@ -10,7 +10,7 @@
     "id": 2,
     "nombre": "Fruta Congelada",
     "propiedades": "Rica en fibra, potasio y conocida por sus propiedades antiinflamatorias.",
-    "imagen": "/images/guanabana.jpg",
+    "imagen": "../assets/guanabana.webp",
     "remedio": "Batido con agua para ayudar a regular la digestión y mejorar el sueño."
   }
 ]

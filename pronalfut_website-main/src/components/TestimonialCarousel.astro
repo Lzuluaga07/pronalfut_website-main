@@ -10,31 +10,29 @@ interface Props {
   title?: string;
   testimonials?: Testimonial[];
 }
+
 const {
   title = "Testimonios",
   testimonials = [
     {
-      quote:
-        "Alimentos SAS superó nuestras expectativas. Compramos un cargamento grande de pulpa de fruta para nuestra cadena de restaurantes, y la calidad es insuperable. La entrega fue puntual y el servicio al cliente impecable. Sin duda, seguiremos trabajando con ellos.",
+      quote: "Alimentos SAS superó nuestras expectativas. Compramos un car...",
       author: "LOLA MILES",
       rating: 5,
       image: "/images/testimonio-1.jpg",
     },
     {
-      quote:
-        "La frescura del producto y la consistencia en cada entrega nos dieron mucha tranquilidad. Desde que trabajamos con ellos, mejoramos la calidad de nuestras bebidas y postres.",
-      author: "CARLOS MÉNDEZ",
+      quote: "La frescura del producto y la consistencia en cada entrega...",
+      author: "JUAN PÉREZ",
       rating: 5,
       image: "/images/testimonio-2.jpg",
     },
     {
-      quote:
-        "Necesitábamos un proveedor confiable para volumen alto y respondieron excelente. Muy buen servicio, buena comunicación y producto de gran nivel.",
+      quote: "Necesitábamos un proveedor confiable para volumen alto...",
       author: "MARÍA FERNANDA",
       rating: 5,
       image: "/images/testimonio-3.jpg",
-    },
-  ],
+    }
+  ]
 } = Astro.props;
 ---
 
@@ -90,10 +88,6 @@ const {
                     class="h-[420px] w-full rounded-[2rem] object-cover shadow-sm md:h-[560px]"
                     loading="lazy"
                   />
-
-                  <div class="pointer-events-none absolute -bottom-8 -right-4 hidden md:block">
-                    <div class="h-24 w-24 rounded-full bg-lime-300/70 blur-[2px]"></div>
-                  </div>
                 </div>
               </div>
             </article>
@@ -141,7 +135,6 @@ const {
   const carousels = document.querySelectorAll("[data-carousel]");
 
   carousels.forEach((carousel) => {
-    // Usamos <HTMLElement> para que reconozca la propiedad .style más adelante
     const track = carousel.querySelector<HTMLElement>("[data-track]");
     const slides = carousel.querySelectorAll("[data-slide]");
     const dots = carousel.querySelectorAll("[data-dot]");
@@ -150,12 +143,10 @@ const {
     const total = slides.length;
 
     let current = 0;
-    // Definimos que interval puede ser un número o undefined
     let interval: number | undefined;
 
     const render = () => {
       if (!track) return;
-      // Ahora TS sabe que track tiene .style gracias al tipado de arriba
       track.style.transform = `translateX(-${current * 100}%)`;
 
       slides.forEach((slide, index) => {
@@ -168,7 +159,6 @@ const {
       });
     };
 
-    // Especificamos que index es un number
     const goTo = (index: number) => {
       current = (index + total) % total;
       render();
@@ -210,4 +200,5 @@ const {
     startAuto();
   });
 </script>
+
 
