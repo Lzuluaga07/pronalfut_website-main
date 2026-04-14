@@ -6,7 +6,7 @@ import TestimonialCarousel from "../components/TestimonialCarousel.astro";
 import Hero from "../components/Hero.astro";
 import Productos from "../components/Productos.astro";
 import Footer from "../components/Footer.astro";
-
+import MainLayout from "../layouts/MainLayout.astro";
 // Datos para el "Emisor"
 const heroTitle = "Pulpas de Fruta 100% Naturales";
 const heroSubtitle = "Sabor real y frescura del campo para tu negocio, procesado con los más altos estándares de calidad.";
@@ -38,20 +38,7 @@ const testimonials = [
 ];
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Alimentos Pronalfrut | Pulpa de fruta 100% natural</title>
-    <meta
-      name="description"
-      content="Pulpas de fruta 100% naturales para negocios que buscan calidad. Sin conservantes y sabor real."
-    />
-  </head>
- <body>
+<MainLayout title="Inicio | Pronalfrut">
   <Navbar logoText="Pronalfrut" whatsappLink="https://wa.me/573001234567" />
 
   <main>
@@ -80,7 +67,35 @@ const testimonials = [
   </main>
 
   <Footer />
-</body>
-</html>
+ <section class="w-full h-[450px] mt-8 mb-12 shadow-md border border-gray-200 rounded-xl overflow-hidden">
+  <iframe 
+    src="https://www.google.com/maps?q=Carrera+64A+%23+4B-41,+Bogotá&output=embed" 
+    class="w-full h-full" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+  </MainLayout>
+  
+  
+
+  
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
 
 

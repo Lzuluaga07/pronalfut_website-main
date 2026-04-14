@@ -18,19 +18,19 @@ const {
       quote: "Alimentos SAS superó nuestras expectativas. Compramos un car...",
       author: "LOLA MILES",
       rating: 5,
-      image: "/images/testimonio-1.jpg",
+      image: "/images/testimonio-1.webp",
     },
     {
       quote: "La frescura del producto y la consistencia en cada entrega...",
       author: "JUAN PÉREZ",
       rating: 5,
-      image: "/images/testimonio-2.jpg",
+      image: "/images/testimonio-2.webp",
     },
     {
       quote: "Necesitábamos un proveedor confiable para volumen alto...",
       author: "MARÍA FERNANDA",
       rating: 5,
-      image: "/images/testimonio-3.jpg",
+      image: "/images/testimonio-3.webp",
     }
   ]
 } = Astro.props;
@@ -85,7 +85,8 @@ const {
                   <img
                     src={item.image}
                     alt={`Testimonio de ${item.author}`}
-                    class="h-[420px] w-full rounded-[2rem] object-cover shadow-sm md:h-[560px]"
+                    class="h-[420px] w-full rounded-[2rem] object-contain shadow-sm md:h-[560px]"
+                   style="mask-image: radial-gradient(circle, black 70%, transparent 100%); -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);"
                     loading="lazy"
                   />
                 </div>
