@@ -1,98 +1,96 @@
 ---
+// 1. IMPORTACIONES
+import MainLayout from '../layouts/MainLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import VideoHero from '../components/VideoHero.astro';
+import Productos from '../components/Productos.astro';
+import TestimonialCarousel from '../components/TestimonialCarousel.astro';
+import Footer from '../components/Footer.astro';
 import "../styles/global.css";
-import Navbar from "../components/Navbar.astro";
-import TextBlock from "../components/TextBlock.astro";
-import TestimonialCarousel from "../components/TestimonialCarousel.astro";
-import Hero from "../components/Hero.astro";
-import Productos from "../components/Productos.astro";
-import Footer from "../components/Footer.astro";
-import MainLayout from "../layouts/MainLayout.astro";
-// Datos para el "Emisor"
-const heroTitle = "Pulpas de Fruta 100% Naturales";
-const heroSubtitle = "Sabor real y frescura del campo para tu negocio, procesado con los más altos estándares de calidad.";
-const heroImage = "/images/hero-bg.webp"; // Asegúrate de que el archivo exista en public/images/
-
 
 const testimonials = [
   {
-    quote:
-      "Alimentos Pronalfrut superó nuestras expectativas. Compramos un cargamento grande de pulpa de fruta para nuestra cadena de restaurantes, y la calidad es insuperable.",
+    quote: "Alimentos Pronalfrut superó nuestras expectativas. Calidad garantizada.",
     author: "CLIENTE SATISFECHO",
     rating: 5,
     image: "/images/testimonio-1.webp",
-  },
-  {
-    quote:
-      "La calidad del producto y la puntualidad en la entrega fueron excelentes. Nuestro negocio pudo operar con total tranquilidad gracias a su cumplimiento.",
-    author: "JUAN PÉREZ",
-    rating: 5,
-    image: "/images/testimonio-2.webp",
-  },
-  {
-    quote:
-      "Muy buena atención y una pulpa de fruta con sabor realmente natural. Se nota el cuidado en todo el proceso.",
-    author: "ANA GARCÍA",
-    rating: 5,
-    image: "/images/testimonio-3.webp",
-  },
+  }
 ];
 ---
-
-<MainLayout title="Inicio | Pronalfrut">
-  <Navbar logoText="Pronalfrut" whatsappLink="https://wa.me/573001234567" />
+<MainLayout title="Inicio | Alimentos Pronalfrut">
+  <Navbar logoText="Pronalfrut" />
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
   <main>
-   <Hero 
-  title="Alimentos Pronalfrut" 
-  subtitle="Pulpa de fruta 100% natural, sabor real y frescura para tu negocio." 
-  imageWebp="/images/hero-pronalfrut.jpeg"
- 
-/>
+    <Hero 
+      title="Pulpas de Fruta 100% Naturales"
+      subtitle="30 años de experiencia brindando el Sabor real y frescura del campo"
+      imageWebp="/images/hero-bg.webp"
+   
+   
+     /> <VideoHero />
 
-    <section id="nosotros" class="py-10">
-      <TextBlock
-        title="Nosotros"
-        paragraph="Somos líderes en Colombia en el procesamiento y conservación de alimentos..."
-        align="center"
-      />
-    </section>
+<section id="nosotros" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-purple-900 mb-4 uppercase">Sobre Nosotros</h2>
+          <p class="text-xl text-gray-700 max-w-3xl mx-auto italic">
+            "Comunicar una identidad corporativa sólida y confiable, transformando la fruta en bienestar."
+          </p>
+        </div>
 
-    <section id="productos">
-      <Productos />
-    </section>
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <div class="p-8 bg-white rounded-xl shadow-md border-l-8 border-purple-800">
+            <h3 class="text-2xl font-bold mb-3">Misión</h3>
+            <p>Producir pulpas de fruta con altos estándares de calidad y servicio.</p>
+          </div>
+          <div class="p-8 bg-white rounded-xl shadow-md border-l-8 border-green-600">
+            <h3 class="text-2xl font-bold mb-3">Visión</h3>
+            <p>Ser líderes en innovación de productos naturales para el 2030.</p>
+          </div>
+        </div>
 
-    <section id="testimonios">
-      <TestimonialCarousel testimonials={testimonials} />
-    </section>
-    <section class="w-full h-[450px] mt-8 mb-12 shadow-md border border-gray-200 rounded-xl overflow-hidden">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.713876007421!2d-74.120712!3d4.627254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9945037e96a7%3A0x6a0f7692293b6e80!2sCarrera%2064A%20%23%204B-41%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1712423000000!5m2!1ses!2sco" 
-        class="w-full h-full" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </section>
-  </main> 
+        <div class="bg-white p-10 rounded-2xl shadow-sm">
+          <h3 class="text-2xl font-bold text-center mb-8">¿Por qué elegirnos?</h3>
+          <div class="grid md:grid-cols-3 gap-6 text-center">
+            <div>
+              <span class="material-symbols-outlined text-4xl text-purple-800">verified</span>
+              <p class="font-bold mt-2">Calidad Validada</p>
+            </div>
+            <div>
+              <span class="material-symbols-outlined text-4xl text-purple-800">corporate_fare</span>
+              <p class="font-bold mt-2">Identidad Sólida</p>
+            </div>
+            <div>
+              <span class="material-symbols-outlined text-4xl text-purple-800">diversity_3</span>
+              <p class="font-bold mt-2">Compromiso Real</p>
+            </div>
+          </div>
+        </div>
 
-  <Footer />
+        </div> </section> <Productos />
+
+  <TestimonialCarousel />
+
+ <section class="w-full h-[450px] mt-10">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.7126868846175!2d-74.12053152502127!3d4.645239195329665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bc95e5946ef%3A0xda9a703a92e0bd3b!2sCra.%2064a%20%234b-41%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1713964400000!5m2!1ses!2sco" 
+    class="w-full h-full border-0" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+</main>
+
+<Footer />
+
 </MainLayout>
 
-  
-  
-
-  
-
-  
-
-
-
-
-
-
-
-  
 
 
 
