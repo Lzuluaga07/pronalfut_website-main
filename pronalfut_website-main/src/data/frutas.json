@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nombre": "Producto Genérico A",
+    "descripcion": "Descripción pendiente de validar para Alimentos Pronalfrut.",
+    "imagen": "/images/productos/placeholder.webp",
+    "categoria": "Frutas"
+  },
+  {
+    "id": 2,
+    "nombre": "Producto Genérico B",
+    "descripcion": "Descripción pendiente de validar para Alimentos Pronalfrut.",
+    "imagen": "/images/productos/placeholder.webp",
+    "categoria": "Frutas"
+  },
+  {
+    "id": 3,
+    "nombre": "Producto Genérico C",
+    "descripcion": "Descripción pendiente de validar para Alimentos Pronalfrut.",
+    "imagen": "/images/productos/placeholder.webp",
+    "categoria": "Frutas"
+  }
+]
+
+
+
+
+
+
+
