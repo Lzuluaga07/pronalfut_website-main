@@ -1,4 +1,4 @@
-name: Despliegue de Producción
+name: Despliegue de Produccion
 on:
   push:
     branches:
@@ -11,10 +11,10 @@ jobs:
       - name: Checkout de repositorio
         uses: actions/checkout@v4
 
-      - name: Instalación de dependencias
+      - name: Instalacion de dependencias
         run: npm install
 
-      - name: Construcción del proyecto
+      - name: Construccion del proyecto
         run: npm run build
 
       - name: Despliegue a Netlify
