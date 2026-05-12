@@ -5,26 +5,31 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout del código
         uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependencias
         run: npm install
 
-      - name: Build project
+      - name: Compilar el sitio Astro
         run: npm run build
 
-      - name: Deploy to Netlify
+      - name: Desplegar a Netlify
         uses: nwtgck/actions-netlify@v3
         with:
           publish-dir: './dist'
           production-deploy: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          netlify-config-path: ./netlify.toml
+          deploy-message: "Deploy desde GitHub Actions"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          
