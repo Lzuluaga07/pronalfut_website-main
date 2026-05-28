@@ -71,27 +71,65 @@ const {
 </style>
 
 <script>
-  const menuButton = document.querySelector('#menu-button');
-  const menuItems = document.querySelector('#menu-items');
-const navLinks = document.querySelectorAll('#menu-items a');
-  
-  if (menuButton && menuItems) {
-    menuButton.addEventListener('click', () => {
-      menuItems.classList.toggle('hidden');
-      menuItems.classList.toggle('flex');
-    });
+  // 1. SELECTORES DE IDIOMA
+  const btnEs = document.getElementById('btn-es');
+  const btnEn = document.getElementById('btn-en');
+
+  function setLanguage(lang: string) {
+    const currentPath = window.location.pathname;
+    
+    if (lang === 'en') {
+      btnEn?.classList.add('text-green-800', 'font-bold');
+      btnEn?.classList.remove('text-gray-500');
+      btnEs?.classList.add('text-gray-500');
+      btnEs?.classList.remove('text-green-800', 'font-bold');
+      
+      if (!currentPath.startsWith('/en')) {
+        window.location.href = '/en/';
+      }
+    } else {
+      btnEs?.classList.add('text-green-800', 'font-bold');
+      btnEs?.classList.remove('text-gray-500');
+      btnEn?.classList.add('text-gray-500');
+      btnEn?.classList.remove('text-green-800', 'font-bold');
+      
+      if (currentPath.startsWith('/en')) {
+        window.location.href = currentPath.replace('/en', '') || '/';
+      }
+   }
+  } // <- Esta es la llave que faltaba para cerrar "setLanguage"
+
+  // 2. ESCUCHAR LOS CLICS EN LOS BOTONES
+  btnEs?.addEventListener('click', () => setLanguage('es'));
+  btnEn?.addEventListener('click', () => setLanguage('en'));
+
+  // 3. MARCAR EL BOTÓN ACTIVO AL CARGAR LA PÁGINA
+  if (window.location.pathname.startsWith('/en')) {
+    btnEn?.classList.add('text-green-800', 'font-bold');
+    btnEn?.classList.remove('text-gray-500');
+    btnEs?.classList.add('text-gray-500');
+    btnEs?.classList.remove('text-green-800', 'font-bold');
+  } else {
+    btnEs?.classList.add('text-green-800', 'font-bold');
+    btnEs?.classList.remove('text-gray-500');
+    btnEn?.classList.add('text-gray-500');
+    btnEn?.classList.remove('text-green-800', 'font-bold');
+  }
+
+  // 4. LÓGICA DEL MENÚ HAMBURGUESA (MÓVIL)
+  const menuButton = document.getElementById('menu-button');
+  const menuItems = document.getElementById('menu-items');
+  const navLinks = document.querySelectorAll('#menu-items a');
+
+  menuButton?.addEventListener('click', () => {
+    menuItems?.classList.toggle('hidden');
+    menuItems?.classList.toggle('flex');
+  });
 
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      menuItems.classList.add('hidden'); // Asegura que se oculte
-      menuItems.classList.remove('flex'); // Quita el modo visible
-  }); // Este cierra el addEventListener (el paréntesis que te faltaba)
-  }); // Este cierra el forEach
-} // Este cierra el if principal
+      menuItems?.classList.add('hidden');
+      menuItems?.classList.remove('flex');
+    });
+  });
 </script>
-
-
-
-  
- 
-
