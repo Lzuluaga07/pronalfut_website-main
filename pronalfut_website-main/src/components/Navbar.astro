@@ -6,7 +6,7 @@ interface Props {
 
 const {
   logoText = "Pronalfrut",
-  whatsappLink = "https://wa.me/573101234567"
+  whatsappLink = "https://wa.me/5733005519049"
 } = Astro.props as Props;
 ---
 
@@ -33,6 +33,7 @@ const {
         <a href="/" class="text-gray-700 hover:text-green-600 font-medium transition-colors">Inicio</a>
         <a href="#nosotros" class="text-gray-700 hover:text-green-600 font-medium transition-colors">Nosotros</a>
         <a href="#productos" class="text-gray-700 hover:text-green-600 font-medium transition-colors">Productos</a>
+        <a href="/blog" class="text-gray-600 hover:text-green-600 font-medium transition-colors">Blog</a>
         <a href="#contacto" class="text-gray-700 hover:text-green-600 font-medium transition-colors">Contacto</a>
        <div class="flex items-center gap-1 text-gray-700 font-medium ml-4 border-l pl-4 border-gray-300">
         <span class="material-symbols-outlined text-orange-600 text-[20px]">
@@ -40,17 +41,22 @@ const {
         </span>
         <span class="text-sm">Bogotá, Colombia</span>
       </div> 
-      </nav>
+     <div class="flex items-center gap-2 ml-4 border-l pl-4 border-gray-300 text-sm font-medium">
+        <button id="btn-es" class="text-green-800 font-bold cursor-pointer transition-colors hover:text-green-600">ES</button>
+        <span class="text-gray-400">|</span>
+        <button id="btn-en" class="text-gray-500 cursor-pointer transition-colors hover:text-green-600">EN</button>
+      </div> 
+      
+    </nav>
 
-      <a 
-  href={whatsappLink} 
-  target="_blank" 
-  class="fixed bottom-6 right-6 z-50 bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition-all flex items-center justify-center"
->
+  <a 
+    href={whatsappLink} 
+    target="_blank" 
+    class="fixed bottom-6 right-6 z-50 bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition-all flex items-center justify-center">
+
   <span class="font-bold">Chat</span>
 </a>
-        </a>
-      </div>
+
     </div>
   </div>
 </header>
