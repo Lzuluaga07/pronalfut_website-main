@@ -1,0 +1,28 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import VideoHero from '../../components/VideoHero.astro';
+import Nosotros from '../../components/Nosotros.astro';
+import Productos from '../../components/Productos.astro';
+import TextBlock from '../../components/TextBlock.astro';
+import Contacto from '../../components/Contacto.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<MainLayout title="Pronalfrut - International">
+  <Navbar />
+  <main>
+    <VideoHero />
+    <Nosotros />
+    <Productos />
+    <TextBlock title="Our Commitment to Quality" 
+  paragraph="At Alimentos Pronalfrut, we process and distribute the highest quality frozen fruit pulps, preserving their natural flavor, nutrients, and freshness for global markets." 
+/> 
+    <Contacto />
+  </main>
+  <Footer />
+</MainLayout>
+
+
+
+

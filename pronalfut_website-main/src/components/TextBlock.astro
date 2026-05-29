@@ -1,5 +1,5 @@
 ---
-interface Props {
+export interface Props {
   title: string;
   paragraph: string;
   align?: "left" | "center" | "right";
@@ -9,7 +9,7 @@ const {
   title, 
   paragraph, 
   align = "center",
-} = Astro.props as Props;
+} = Astro.props 
 
 const alignment = {
   left: "text-left",
@@ -17,6 +17,7 @@ const alignment = {
   right: "text-right",
 };
 ---
+
 
 <section class="py-16 px-4 bg-white">
   <div class={`mx-auto max-w-4xl ${alignment[align]}`}>
