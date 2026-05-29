@@ -115,7 +115,8 @@ const {
     btnEn?.classList.add('text-gray-500');
     btnEn?.classList.remove('text-green-800', 'font-bold');
   }
-
+  btnEs?.addEventListener('click', () => setLanguage('es'));
+  btnEn?.addEventListener('click', () => setLanguage('en'));
   // 4. LÓGICA DEL MENÚ HAMBURGUESA (MÓVIL)
   const menuButton = document.getElementById('menu-button');
   const menuItems = document.getElementById('menu-items');
