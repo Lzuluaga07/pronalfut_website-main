@@ -1,0 +1,25 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import VideoHero from '../components/VideoHero.astro';
+import Nosotros from '../components/Nosotros.astro';
+import Productos from '../components/Productos.astro';
+import TextBlock from '../components/TextBlock.astro';
+import Contacto from '../components/Contacto.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<MainLayout title="Alimentos Pronalfrut - Inicio">
+  <Navbar />
+  <main>
+    <VideoHero />
+    <Nosotros />
+    <Productos />
+    <TextBlock 
+      title="Nuestro Compromiso con la Calidad" 
+      paragraph="En Alimentos Pronalfrut nos dedicamos a procesar y comercializar pulpas de fruta congeladas de la más alta calidad, manteniendo el sabor natural y la frescura del campo." 
+    />
+    <Contacto />
+  </main>
+  <Footer />
+</MainLayout>
