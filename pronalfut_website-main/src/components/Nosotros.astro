@@ -1,58 +1,46 @@
+---
+import traducciones from '../data/idiomas.json';
+
+const esIngles = Astro.url.pathname.startsWith('/en');
+const idioma = esIngles ? 'en' : 'es';
+
+const t = traducciones[idioma].nosotros;
+---
+
 <section class="py-20 bg-white" id="nosotros">
   <div class="container mx-auto px-6">
     
     <div class="max-w-4xl mx-auto text-center mb-16">
-      <h2 class="text-3xl font-bold text-green-700 md:text-3xl mb-4 tracking-normal">
-  Quiénes somos
-</h2>
+      <h2 class="text-3xl font-bold text-green-700 md:text-3xl mb-4 tracking-wide">
+        {t.titulo}
+      </h2>
       <p class="text-xl text-gray-700 leading-relaxed">
-        Somos una empresa dedicada a la producción y comercialización de pulpa de fruta natural de alta calidad. En <strong>ALIMENTOS PRONALFRUT</strong>, transformamos la riqueza del campo en soluciones saludables, garantizando frescura en cada proceso. 
+        {t.descripcion}
       </p>
     </div>
 
-  <div class="grid md:grid-cols-2 gap-12 mb-20 mt-12">
+    <div class="grid md:grid-cols-2 gap-12 mb-20 mt-12">
+      <!-- Bloque de Misión -->
       <div class="p-10 rounded-2xl bg-slate-50 border-t-8 border-purple-800 shadow-sm">
         <h3 class="text-2xl font-bold text-purple-900 mb-4 flex items-center gap-2">
-          🎯 Misión 
+          🎯 {t.misionTitulo}
         </h3>
         <p class="text-gray-700 text-lg leading-relaxed">
-          Dedicada al desarrollo, producción y mercadeo de Productos elaborados a partir de Frutas, para satisfacer los gustos y necesidades de los consumidores, a través de acciones de calidad, servicio y eficiencia, con responsabilidad frente a los clientes, la sociedad, al medio ambiente y a los miembros que conforman nuestro equipo de trabajo.
+          {t.misionTexto}
         </p>
       </div>
 
+      <!-- Bloque de Visión -->
       <div class="p-10 rounded-2xl bg-slate-50 border-t-8 border-purple-800 shadow-sm">
         <h3 class="text-2xl font-bold text-purple-900 mb-4 flex items-center gap-2">
-          🚀 Visión
+          🚀 {t.visionTitulo}
         </h3>
         <p class="text-gray-700 text-lg leading-relaxed">
-          Ser una empresa colombiana líder en la producción de productos naturales a base fruta que satisfagan la demanda del mercado alimenticio, con el mas alto nivel de Calidad y competitividad, destacándose nacional e internacionalmente en pro del desarrollo sostenible de Colombia y la conservación de la Ecología.
+          {t.visionTexto}
         </p>
-      </div>
-    </div>
-    
-
-    <div class="bg-purple-900 rounded-3xl p-12 text-white">
-      <h3 class="text-3xl font-bold mb-10 text-center">¿Por qué confiar en nosotros?</h3>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="text-center p-4">
-          <span class="text-4xl block mb-4">🏆</span>
-          <h4 class="text-xl font-bold mb-2">Calidad Certificada</h4>
-          <p class="text-purple-100">Procesos estandarizados bajo estrictas normas de seguridad alimentaria. </p>
-        </div>
-        <div class="text-center p-4">
-          <span class="text-4xl block mb-4">🌱</span>
-          <h4 class="text-xl font-bold mb-2">Origen Natural</h4>
-          <p class="text-purple-100">Seleccionamos las mejores materias primas directamente del campo. </p>
-        </div>
-        <div class="text-center p-4">
-          <span class="text-4xl block mb-4">🤝</span>
-          <h4 class="text-xl font-bold mb-2">Compromiso Real</h4>
-          <p class="text-purple-100">Un equipo humano enfocado en la excelencia y la mejora continua. </p>
-        </div>
       </div>
     </div>
 
   </div>
 </section>
-
 

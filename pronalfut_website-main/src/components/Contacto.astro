@@ -1,29 +1,60 @@
 ---
+import traducciones from '../data/idiomas.json';
 
+const esIngles = Astro.url.pathname.startsWith('/en');
+const idioma = esIngles ? 'en' : 'es';
+
+const t = traducciones[idioma].contacto;
 ---
 
 <section id="contacto" class="py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-3xl md:text-5xl font-bold text-center text-green-800 mb-8">
-  Contacto
-</h2>
+      {t.titulo}
+    </h2>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
       
       <!-- Información de Contacto (US7.2 y US7.3) -->
       <div class="space-y-6">
-        <h3 class="text-xl font-semibold mb-4">¡Ponte en contacto con nosotros!</h3>
+        <h3 class="text-xl font-semibold mb-4">{t.subtitulo}</h3>
+        
+        <!-- Dirección -->
         <div class="flex items-center gap-4">
-        <span class="material-symbols-outlined text-emerald-600">location_on</span>  
-          <p>Cra. 64a #4b-41, Bogotá D.C.</p>
+          <span class="material-symbols-outlined text-emerald-600">location_on</span>
+          <p>Cra. 64A #4b-41, Bogotá D.C.</p>
         </div>
+        
+        <!-- Teléfono Fijo (PBX) -->
         <div class="flex items-center gap-4">
           <span class="material-symbols-outlined text-emerald-600">call</span>
-          <p>+57 (601) 420-27-30</p>
+          <p>+57 (601) 420-27-30 (PBX)</p>
         </div>
+
+       <!-- Celular Corporativo y WhatsApp con Logo Oficial (UX limpia) -->
+        <div class="flex items-center gap-4">
+          <a 
+            href="https://wa.me/573005519049?text=Hola%20Alimentos%20Pronalfrut,%20deseo%20solicitar%20más%20información%20sobre%20sus%20pulpas%20de%20fruta." 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="flex items-center gap-3 group hover:text-emerald-600 transition-colors"
+          >
+            <!-- SVG Oficial de WhatsApp Arreglado -->
+            <svg class="w-6 h-6 flex-shrink-0 fill-current text-[#25D366] group-hover:scale-110 transition-transform" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.296 1.489 4.974 1.493 5.433.002 9.85-4.413 9.853-9.843.002-2.63-1.023-5.101-2.886-6.968C16.666 1.869 14.198 1.845 11.569 1.845c-5.432 0-9.849 4.417-9.853 9.847-.001 1.812.488 3.536 1.417 5.101l-.955 3.486 3.58-.939zm11.365-5.413c-.312-.156-1.843-.91-2.128-1.013-.284-.104-.49-.156-.696.156-.206.311-.797.986-.977 1.194-.18.208-.36.233-.672.078-1.32-.662-2.185-1.161-3.053-2.657-.228-.393.228-.364.654-1.215.072-.143.036-.269-.018-.376-.054-.107-.491-1.184-.672-1.62-.176-.424-.37-.364-.509-.371-.13-.007-.28-.007-.43-.007-.15 0-.393.056-.599.28-.206.225-.785.767-.785 1.871s.804 2.167.917 2.323c.112.156 1.58 2.411 3.827 3.377.535.23 1.025.367 1.376.479.537.171 1.026.147 1.412.09.431-.064 1.843-.754 2.102-1.447.258-.693.258-1.287.18-1.412-.078-.125-.284-.203-.596-.36z"/>
+            </svg>
+            <span class="font-medium text-gray-700 group-hover:text-emerald-600 underline decoration-dotted">
+              Escríbenos
+            </span>
+          </a>
+        </div> 
+        </div>
+        
+
+        <!-- Correo Electrónico Único -->
         <div class="flex items-center gap-4">
           <span class="material-symbols-outlined text-emerald-600">mail</span>
-         <p><a href="mailto:sales@pronalfrut.com" class="hover:text-emerald-600 transition-colors">sales@pronalfrut.com</a></p>
+          <p><a href="mailto:sales@pronalfrut.com" class="hover:text-emerald-600 transition-colors">sales@pronalfrut.com</a></p>
         </div>
       </div>
 
@@ -58,5 +89,15 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
 
 

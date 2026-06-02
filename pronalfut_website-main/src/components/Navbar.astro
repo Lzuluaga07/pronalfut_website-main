@@ -1,127 +1,113 @@
 ---
-interface Props {
-  logoText?: string;
-  whatsappLink?: string;
-}
+import traducciones from '../data/idiomas.json';
 
-const {
-  logoText = "Pronalfrut",
-  whatsappLink = "https://wa.me/5733005519049"
-} = Astro.props as Props;
+const esIngles = Astro.url.pathname.startsWith('/en');
+const idioma = esIngles ? 'en' : 'es';
+
+const t = traducciones[idioma].navbar;
+const baseRoute = esIngles ? '/en' : '';
 ---
 
-<header class="sticky top-0 z-50 w-full bg-white shadow-md">
-  <div class="w-full px-4 md:px-20">
-    <div class="flex w-full justify-between items-center h-20 md:h-32">
-      
-      <div class="flex-shrink-0">
-        <a href="#inicio" class="flex items-center">
-         <img 
-          src="/test-logo.png" 
-          alt="Logo oficial Pronalfrut" 
-          class="h-16 w-auto object-contain md:h-20 transition-all duration-300"
-        /> 
+<header class="bg-white shadow-md sticky top-0 z-50 w-full">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center w-full">
+    
+    <!-- Logo de la Empresa -->
+    <div class="flex items-center flex-shrink-0">
+      <a href={esIngles ? "/en" : "/"}>
+        <img src="/test-logo.png" alt="Logo Pronalfrut" class="h-32 md:h-36 w-auto object-contain py-1" />
+      </a>
+    </div>
+<!-- Menú Escritorio -->
+    <div class="hidden md:flex items-center space-x-6 lg:space-x-8 font-medium text-gray-700">
+      <a href={esIngles ? "/en" : "/"} class="hover:text-green-600 transition-colors">{t.inicio}</a>
+      <a href={esIngles ? "/en#nosotros" : "/#nosotros"} class="hover:text-green-600 transition-colors">{t.nosotros}</a>
+      <a href={esIngles ? "/en#productos" : "/#productos"} class="hover:text-green-600 transition-colors">{t.productos}</a>
+      <a href="/blog" class="hover:text-green-600 transition-colors">{t.blog}</a>
+      <a href={esIngles ? "/en#contacto" : "/#contacto"} class="hover:text-green-600 transition-colors">{t.contacto}</a>
+    
+      <span class="text-gray-300">|</span>
+
+      <!-- Ubicación -->
+      <div class="flex items-center space-x-1 text-sm text-gray-500">
+        <span class="material-symbols-outlined text-orange-500 text-lg">location_on</span>
+        <span>Bogotá, Colombia</span>
+      </div>
+
+      <span class="text-gray-300">|</span>
+
+      <!-- Selector de Idiomas Desplegable con Banderas Reales (Desktop) -->
+      <div class="relative group cursor-pointer py-2">
+        <div class="flex items-center space-x-2 text-sm font-semibold text-gray-700 hover:text-green-600">
+          {esIngles ? (
+            <img src="https://flagcdn.com/w40/us.png" alt="USA Flag" class="w-5 h-5 rounded-full object-cover shadow-sm" />
+            <span>English</span>
+          ) : (
+            <img src="https://flagcdn.com/w40/co.png" alt="Colombia Flag" class="w-5 h-5 rounded-full object-cover shadow-sm" />
+            <span>Español</span>
+          )}
+          <svg class="h-4 w-4 fill-current transition-transform group-hover:rotate-180" viewBox="0 0 20 20">
+            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+          </svg>
+        </div>
+        
+        <!-- Lista desplegable -->
+        <div class="absolute right-0 mt-2 w-40 bg-white border border-gray-100 rounded-md shadow-lg hidden group-hover:block z-50">
+          <div class="py-1">
+            <a href="/" class="flex items-center space-x-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-600">
+              <img src="https://flagcdn.com/w40/co.png" alt="Colombia" class="w-5 h-5 rounded-full object-cover shadow-sm" />
+              <span>Español</span>
+            </a>
+            <a href="/en" class="flex items-center space-x-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-600">
+              <img src="https://flagcdn.com/w40/us.png" alt="USA" class="w-5 h-5 rounded-full object-cover shadow-sm" />
+              <span>English</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Botón Menú Hamburguesa (Móvil) -->
+    <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none focus:text-green-600">
+      <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+        <path id="hamburger-icon" class="block" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Menú Desplegable Móvil -->
+  <div id="mobile-menu" class="hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 font-medium text-gray-700 shadow-inner w-full">
+    <a href={esIngles ? "/en" : "/"} class="block hover:text-green-600 transition-colors">{t.inicio}</a>
+    <a href={`${baseRoute}#nosotros`} class="block hover:text-green-600 transition-colors">{t.nosotros}</a>
+    <a href={`${baseRoute}#productos`} class="block hover:text-green-600 transition-colors">{t.productos}</a>
+    <a href={`${baseRoute}#contacto`} class="block hover:text-green-600 transition-colors">{t.contacto}</a>
+    <a href="/blog" class="block hover:text-green-600 transition-colors">{t.blog}</a>
+    
+    <div class="border-t border-gray-200 my-2 pt-2 space-y-2">
+      <p class="text-xs text-gray-400 font-bold uppercase tracking-wider">Idioma / Language</p>
+      <div class="flex flex-col space-y-3 text-sm">
+        <a href="/" class={`flex items-center space-x-3 ${!esIngles ? 'text-green-700 font-bold' : 'text-gray-500'}`}>
+          <img src="https://flagcdn.com/w40/co.png" alt="Colombia" class="w-5 h-5 rounded-full object-cover shadow-sm" />
+          <span>Español</span>
+        </a>
+        <a href="/en" class={`flex items-center space-x-3 ${esIngles ? 'text-green-700 font-bold' : 'text-gray-500'}`}>
+          <img src="https://flagcdn.com/w40/us.png" alt="USA" class="w-5 h-5 rounded-full object-cover shadow-sm" />
+          <span>English</span>
         </a>
       </div>
-    <button id="menu-button" class="block md:hidden text-gray-700 focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-
-      <nav id="menu-items" class="hidden md:flex flex-col md:flex-row absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none space-y-4 md:space-y-0 md:space-x-8 z-50">
-        <a href="/" class="text-gray-700 hover:text-green-600 font-medium transition-colors">Inicio</a>
-        <a href="#nosotros" class="text-gray-700 hover:text-green-600 font-medium transition-colors">Nosotros</a>
-        <a href="#productos" class="text-gray-700 hover:text-green-600 font-medium transition-colors">Productos</a>
-        <a href="/blog" class="text-gray-600 hover:text-green-600 font-medium transition-colors">Blog</a>
-        <a href="#contacto" class="text-gray-700 hover:text-green-600 font-medium transition-colors">Contacto</a>
-       <div class="flex items-center gap-1 text-gray-700 font-medium ml-4 border-l pl-4 border-gray-300">
-        <span class="material-symbols-outlined text-orange-600 text-[20px]">
-          location_on
-        </span>
-        <span class="text-sm">Bogotá, Colombia</span>
-      </div> 
-     <div class="flex items-center gap-2 ml-4 border-l pl-4 border-gray-300 text-sm font-medium">
-        <button id="btn-es" class="text-green-800 font-bold cursor-pointer transition-colors hover:text-green-600">ES</button>
-        <span class="text-gray-400">|</span>
-        <button id="btn-en" class="text-gray-500 cursor-pointer transition-colors hover:text-green-600">EN</button>
-      </div> 
-      
-    </nav>
-
-  <a 
-    href={whatsappLink} 
-    target="_blank" 
-    class="fixed bottom-6 right-6 z-50 bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition-all flex items-center justify-center">
-
-  <span class="font-bold">Chat</span>
-</a>
-
     </div>
   </div>
 </header>
 
-<style is:global>
-  html { scroll-behavior: smooth; }
-</style>
-
-<style>
-  a { transition: transform 0.2s; }
-  a:hover { transform: scale(1.05); }
-</style>
-
 <script>
-  // 1. OBTENER LOS BOTONES DE IDIOMA
-  const btnEs = document.getElementById('btn-es');
-  const btnEn = document.getElementById('btn-en');
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-  // 2. FUNCIÓN PARA REDIRIGIR SEGÚN EL IDIOMA
-  function setLanguage(lang: String) {
-    const currentPath = window.location.pathname;
-
-    if (lang === 'en') {
-      if (!currentPath.startsWith('/en')) {
-        window.location.href = '/en' + currentPath;
-      }
-    } else {
-      if (currentPath.startsWith('/en')) {
-        const newPath = currentPath.replace('/en', '');
-        window.location.href = newPath || '/';
-      }
-    }
-  }
-
-  // 3. ESCUCHAR LOS CLICS EN LOS BOTONES DE IDIOMA
-  btnEs?.addEventListener('click', () => setLanguage('es'));
-  btnEn?.addEventListener('click', () => setLanguage('en'));
-
-  // 4. CAMBIAR COLORES DE LOS BOTONES AL CARGAR LA PÁGINA
-  if (window.location.pathname.startsWith('/en')) {
-    btnEn?.classList.add('text-green-700', 'font-bold');
-    btnEn?.classList.remove('text-gray-500');
-    btnEs?.classList.add('text-gray-500');
-    btnEs?.classList.remove('text-green-700', 'font-bold');
-  } else {
-    btnEs?.classList.add('text-green-700', 'font-bold');
-    btnEs?.classList.remove('text-gray-500');
-    btnEn?.classList.add('text-gray-500');
-    btnEn?.classList.remove('text-green-700', 'font-bold');
-  }
-  // 4. LÓGICA DEL MENÚ HAMBURGUESA (MÓVIL)
-  const menuButton = document.getElementById('menu-button');
-  const menuItems = document.getElementById('menu-items');
-  const navLinks = document.querySelectorAll('#menu-items a');
-
-  menuButton?.addEventListener('click', () => {
-    menuItems?.classList.toggle('hidden');
-    menuItems?.classList.toggle('flex');
-  });
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      menuItems?.classList.add('hidden');
-      menuItems?.classList.remove('flex');
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
-  });
+  }
 </script>
 

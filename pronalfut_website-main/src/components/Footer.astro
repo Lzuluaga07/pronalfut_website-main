@@ -1,49 +1,56 @@
 ---
+import traducciones from '../data/idiomas.json';
+
 const currentYear = new Date().getFullYear();
+const esIngles = Astro.url.pathname.startsWith('/en');
+const idioma = esIngles ? 'en' : 'es';
+
+const t = traducciones[idioma].footer;
 ---
 
 <footer id="contacto" class="bg-[#4c1d95] text-white py-12 mt-10">
   <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
     
     <div class="space-y-4">
-      <h3 class="text-2xl font-bold text-white uppercase tracking-tight">Alimentos Pronalfrut sas
-      </h3>
+      <h3 class="text-2xl font-bold text-white uppercase tracking-tight">Alimentos Pronalfrut SAS</h3>
       <p class="text-sm text-purple-200 font-semibold">NIT: 900436915</p>
       <p class="text-purple-100 text-sm leading-relaxed">
-        Más de 30 años de experiencia comprometidos con la calidad natural y el procesamiento de los mejores frutos del campo colombiano.
+        {t.descripcion}
       </p>
     </div>
 
     <div class="space-y-4">
-      <h3 class="text-xl font-bold border-b-2 border-green-500 w-fit pb-1">Navegación</h3>
+      <h3 class="text-xl font-bold border-b-2 border-green-500 w-fit pb-1">{t.navTitulo}</h3>
       <ul class="space-y-2 text-purple-100 text-sm">
-        <li><a href="/" class="hover:text-green-400 transition-colors">Inicio</a></li>
-        <li><a href="#nosotros" class="hover:text-green-400 transition-colors">Nosotros</a></li>
-        <li><a href="#productos" class="hover:text-green-400 transition-colors">Productos</a></li>
-        <li><a href="#testimonios" class="hover:text-green-400 transition-colors">Nuestros clientes</a></li>
-        <li><a href="/blog" class="hover:text-green-400 transition-colors">Blog</a></li>
+        <li><a href="/" class="hover:text-green-400 transition-colors">{t.navInicio}</a></li>
+        <li><a href="#nosotros" class="hover:text-green-400 transition-colors">{t.navNosotros}</a></li>
+        <li><a href="#productos" class="hover:text-green-400 transition-colors">{t.navProductos}</a></li>
+        <li><a href="#testimonios" class="hover:text-green-400 transition-colors">{t.navClientes}</a></li>
+        <li><a href="/blog" class="hover:text-green-400 transition-colors">{t.navBlog}</a></li>
       </ul>
     </div>
 
     <div class="space-y-4">
-      <h3 class="text-xl font-bold border-b-2 border-green-500 w-fit pb-1">Contacto</h3>
+      <h3 class="text-xl font-bold border-b-2 border-green-500 w-fit pb-1">{t.contactoTitulo}</h3>
       <div class="flex items-start gap-3 text-purple-100 text-sm">
-        <span class="material-symbols-outlined">location_on</span> 
-        <p>Carrera 64A # 4B-41, Bogotá, Colombia</p>
+        <span class="material-symbols-outlined">location_on</span>
+        <p>Cra. 64A # 4B-41, Bogotá, Colombia</p>
       </div>
-      <div class="flex items-start gap-3 text-purple-100 text-sm mt-4">
+      <div class="flex items-center gap-3 text-purple-100 text-sm">
         <span class="material-symbols-outlined">call</span>
         <p>601 420 2730</p>
       </div>
-      <div class="flex items-start gap-3 text-purple-100 text-sm mt-4">
+      <div class="flex items-center gap-3 text-purple-100 text-sm">
         <span class="material-symbols-outlined">mail</span>
-      <p><a href="mailto:sales@pronalfrut.com" class="hover:text-white transition-colors">sales@pronalfrut.com</a></p>
+        <p><a href="mailto:sales@pronalfrut.com" class="hover:text-white transition-colors">sales@pronalfrut.com</a></p>
       </div>
     </div>
 
-  </div> <div class="w-full border-t border-purple-800 mt-10 pt-8">
+  </div>
+
+  <div class="w-full border-t border-purple-800 mt-10 pt-8">
     <p class="text-center text-purple-300 text-xs px-4">
-      &copy; {currentYear} Alimentos Pronalfrut. Todos los derechos reservados.
+      {currentYear} Alimentos Pronalfrut. {t.derechos.replace('© 2026 Alimentos Pronalfrut. ', '')}
     </p>
   </div>
 </footer>
