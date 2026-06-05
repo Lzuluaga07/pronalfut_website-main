@@ -1,48 +1,30 @@
 ---
-// 1. Importamos las imágenes
-import heroImg from '../assets/hero-main.webp';
-import guanabanaImg from '../assets/guanabana.webp';
-import naranjaImg from '../assets/naranja.webp';
-
-// 2. Definimos los props (solo una vez)
-const {
-  title = "Alimentos Pronalfrut",
-  subtitle = "30 años de experiencia ofreciendo el mejor sabor",
-} = Astro.props;
+const { title = "Alimentos Pronalfrut", subtitle = "30 años de experiencia ofreciendo el mejor sabor" } = Astro.props;
 ---
-<section class="relative h-[80vh] flex items-center justify-center overflow-hidden bg-gray-900">
-  <div class="absolute inset-0 z-0">
-    <img 
-      src={heroImg.src}
-      alt="Imagen principal de Alimentos Pronalfrut" 
-      class="w-full h-full object-cover opacity-60"
-    />
-  </div>
 
-  <div class="relative z-10 text-center px-6 max-w-5xl text-white">
-    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight drop-shadow-md">
-      {title}
-    </h1>
-    
-    <p class="text-lg md:text-2xl mb-10 max-w-2xl mx-auto opacity-90 leading-relaxed">
-      {subtitle}
-    </p>
-    
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a 
-        href="#productos" 
-        class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-lg"
-      >
-        Ver Productos
-      </a>
-      <a 
-        href="#contacto" 
-      class="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white border-2 border-white/50 hover:border-white px-8 py-3 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg"  
-      >
-        Contáctanos
-      </a>
+<section class="relative h-[80vh] flex items-center justify-center overflow-hidden bg-gray-900">
+    <div class="absolute inset-0 z-0">
+    <!-- Cambia esta línea -->
+<img 
+    src="/images/hero-main.webp" 
+    alt="Alimentos Pronalfrut" 
+    class="w-full h-full object-cover opacity-60" 
+/>   
     </div>
-  </div>
+    <div class="relative z-10 text-center px-6 max-w-5xl text-white">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">{title}</h1>
+        <p class="text-lg md:text-2xl mb-10 max-w-2xl mx-auto opacity-90">{subtitle}</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#productos" class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-full transition-all">Ver Productos</a>
+            <a href="#contacto" class="bg-white/20 hover:bg-white/30 text-white border-2 border-white/50 px-8 py-3 rounded-full font-semibold transition-all">Contáctanos</a>
+        </div>
+    </div>
 </section>
+
+
+
+
+
+
 
 
