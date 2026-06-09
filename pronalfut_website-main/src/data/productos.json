@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "nombre": "Pulpa de Fruta",
+    "nombre": "Naranja",
     "propiedades": "Alta en Vitamina C, antioxidante y fortalece el sistema inmunológico.",
     "imagen": "../assets/naranja.webp",
     "remedio": "Infusión de cáscara con miel para aliviar la tos y la congestión."
   },
   {
     "id": 2,
-    "nombre": "Fruta Congelada",
+    "nombre": "Guanábana",
     "propiedades": "Rica en fibra, potasio y conocida por sus propiedades antiinflamatorias.",
     "imagen": "../assets/guanabana.webp",
     "remedio": "Batido con agua para ayudar a regular la digestión y mejorar el sueño."
