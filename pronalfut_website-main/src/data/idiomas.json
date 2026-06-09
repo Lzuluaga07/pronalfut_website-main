@@ -22,8 +22,8 @@
       "ver_menos": "Ver menos"
     },
     "contacto": {
-      "titulo": "Contacto",
-      "subtitulo": "¡Ponte en contacto con nosotros!",
+      "titulo": "Contactanos",
+      "subtitulo": "",
       "placeholderNombre": "Nombre"
     },
     "footer": {
@@ -34,7 +34,7 @@
       "navProductos": "Productos",
       "navClientes": "Nuestros clientes",
       "navBlog": "Blog",
-      "contactoTitulo": "Contacto",
+      "contactoTitulo": "Contactanos",
       "derechos": "© 2026 Alimentos Pronalfrut. Todos los derechos reservados."
     }
   },
