@@ -1,12 +1,9 @@
 import { useState } from 'react';
-import traducciones from '../data/idiomas.json'; // Importamos el JSON directamente
+import traducciones from '../data/idiomas.json';
 
-export default function ProductCard({ producto, imagenOptimizada }) {
-    // Detectamos el idioma (igual que en tus otros archivos)
+export default function ProductCard({ producto }) {
     const esIngles = typeof window !== 'undefined' && window.location.pathname.startsWith('/en');
     const idioma = esIngles ? 'en' : 'es';
-    
-    // Accedemos a la sección de productos (asegúrate de que en idiomas.json exista la clave "productos")
     const t = traducciones[idioma].productos;
     
     const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +13,7 @@ export default function ProductCard({ producto, imagenOptimizada }) {
             {/* Imagen del Producto */}
             <div className="relative h-64 w-full overflow-hidden rounded-t-xl mb-4">
                 <img
-                    src={imagenOptimizada || producto.imagen}
+                    src={producto.imagen}
                     alt={producto.nombre}
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                 />
