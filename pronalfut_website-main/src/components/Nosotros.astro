@@ -1,17 +1,15 @@
 ---
 import traducciones from '../data/idiomas.json';
-
-const esIngles = Astro.url.pathname.startsWith('/en');
+const esIngles = Astro.url.pathname.startsWith('/en/');
 const idioma = esIngles ? 'en' : 'es';
-
 const t = traducciones[idioma].nosotros;
 ---
 
-<section class="py-20 bg-white" id="nosotros">
+<section class="py-20 bg-gray-50" id="nosotros">
   <div class="container mx-auto px-6">
     
-    <div class="max-w-4xl mx-auto text-center mb-16">
-      <h2 class="text-3xl font-bold text-green-700 md:text-3xl mb-4 tracking-wide">
+    <div class="max-w-4xl mx-auto mb-16 p-10 bg-white rounded-3xl shadow-lg border border-gray-100 text-center">
+      <h2 class="text-3xl font-bold text-purple-900 mb-6 tracking-wide">
         {t.titulo}
       </h2>
       <p class="text-xl text-gray-700 leading-relaxed">
@@ -19,9 +17,9 @@ const t = traducciones[idioma].nosotros;
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-12 mb-20 mt-12">
-      <!-- Bloque de Misión -->
-      <div class="p-10 rounded-2xl bg-slate-50 border-t-8 border-purple-800 shadow-sm">
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100">
         <h3 class="text-2xl font-bold text-purple-900 mb-4 flex items-center gap-2">
           🎯 {t.misionTitulo}
         </h3>
@@ -30,8 +28,7 @@ const t = traducciones[idioma].nosotros;
         </p>
       </div>
 
-      <!-- Bloque de Visión -->
-      <div class="p-10 rounded-2xl bg-slate-50 border-t-8 border-purple-800 shadow-sm">
+      <div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100">
         <h3 class="text-2xl font-bold text-purple-900 mb-4 flex items-center gap-2">
           🚀 {t.visionTitulo}
         </h3>
@@ -40,7 +37,9 @@ const t = traducciones[idioma].nosotros;
         </p>
       </div>
     </div>
-
   </div>
 </section>
+
+
+
 

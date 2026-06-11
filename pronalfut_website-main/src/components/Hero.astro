@@ -1,25 +1,47 @@
 ---
-const { title = "Alimentos Pronalfrut", subtitle = "30 años de experiencia ofreciendo el mejor sabor" } = Astro.props;
+// Tu lógica de props actual
+const { title = "Alimentos Pronalfrut", subtitle = "30 años de experiencia..." } = Astro.props;
 ---
 
-<section class="relative h-[80vh] flex items-center justify-center overflow-hidden bg-gray-900">
-    <div class="absolute inset-0 z-0">
-    <!-- Cambia esta línea -->
-<img 
-    src="/images/hero-main.webp" 
-    alt="Alimentos Pronalfrut" 
-    class="w-full h-full object-cover opacity-60" 
-/>   
-    </div>
-    <div class="relative z-10 text-center px-6 max-w-5xl text-white">
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">{title}</h1>
-        <p class="text-lg md:text-2xl mb-10 max-w-2xl mx-auto opacity-90">{subtitle}</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#productos" class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-full transition-all">Ver Productos</a>
-            <a href="#contacto" class="bg-white/20 hover:bg-white/30 text-white border-2 border-white/50 px-8 py-3 rounded-full font-semibold transition-all">Contáctanos</a>
-        </div>
-    </div>
+<!-- 1. Sección como contenedor relativo que cubre toda la altura -->
+<section class="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
+  
+  
+  <img 
+    src="/images/mora.webp" 
+    alt="Pulpa de mora Pronalfrut" 
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+
+  <!-- Capa oscura para asegurar legibilidad -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- Contenido centrado -->
+  <div class="relative z-10 text-center text-white px-6">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">{title}</h1>
+    <p class="text-xl md:text-2xl mb-10 opacity-90">{subtitle}</p>
+    
+    
+<!-- Cambiamos mt-16 por mt-16 md:mt-32 -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-16 md:mt-32">
+  
+  <a href="#productos" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-bold shadow-lg">
+    Ver Productos
+  </a>
+
+  <a href="#contacto" class="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-lg font-bold backdrop-blur-sm shadow-lg">
+    Contáctanos
+  </a>
+  
+</div>
+
+  </div>
 </section>
+
+
+
+
+
 
 
 
