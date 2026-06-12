@@ -1,24 +1,24 @@
 ---
 import ProductCard from './productcard.jsx';
 import productosData from '../data/productos.json';
+import traducciones from '../data/idiomas.json';
+// IMPORTANTE: Asegúrate de que la ruta sea correcta (./TituloSeccion.astro)
+import TituloSeccion from './TituloSeccion.astro'; 
+
+const esIngles = Astro.url.pathname.startsWith('/en');
+const idioma = esIngles ? 'en' : 'es';
+const t: any = traducciones[idioma].productos;
 ---
 
-<section id="productos" class="py-16 bg-gray-50">
-  <div class="container mx-auto px-6 max-w-6xl">
-    
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-green-800 mb-12">
-      Nuestros Productos
-    </h2>
+<section id="productos" class="py-8 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-6xl">
+        
+        <TituloSeccion texto={t.tituloProductos || 'Nuestros Productos'} />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {
-        productosData.map((producto) => (
-          <ProductCard 
-            producto={producto} 
-            client:load 
-          />
-        ))
-      }
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {productosData.map((producto) => (
+                <ProductCard producto={producto} client:load />
+            ))}
+        </div>
     </div>
-   </div>
-</section> ```
+</section>

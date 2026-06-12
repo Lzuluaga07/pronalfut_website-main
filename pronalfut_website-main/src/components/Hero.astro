@@ -1,42 +1,60 @@
 ---
-// Tu lógica de props actual
-const { title = "Alimentos Pronalfrut", subtitle = "30 años de experiencia..." } = Astro.props;
+import traducciones from '../data/idiomas.json';
+const esIngles = Astro.url.pathname.startsWith('/en');
+const idioma = esIngles ? 'en' : 'es';
+const t = traducciones[idioma].hero; 
 ---
 
-<!-- 1. Sección como contenedor relativo que cubre toda la altura -->
 <section class="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
-  
-  
-  <img 
-    src="/images/mora.webp" 
-    alt="Pulpa de mora Pronalfrut" 
-    class="absolute inset-0 w-full h-full object-cover"
-  />
-
-  <!-- Capa oscura para asegurar legibilidad -->
-  <div class="absolute inset-0 bg-black/50"></div>
-
-  <!-- Contenido centrado -->
-  <div class="relative z-10 text-center text-white px-6">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6">{title}</h1>
-    <p class="text-xl md:text-2xl mb-10 opacity-90">{subtitle}</p>
+    <!-- Imagen de fondo -->
+    <img 
+        src="/images/mora.webp" 
+        alt="Pulpa de mora Pronalfrut" 
+        class="absolute inset-0 w-full h-full object-cover"
+    />
     
-    
-<!-- Cambiamos mt-16 por mt-16 md:mt-32 -->
-<div class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-16 md:mt-32">
-  
-  <a href="#productos" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-bold shadow-lg">
-    Ver Productos
-  </a>
+    <!-- Capa oscura para asegurar legibilidad -->
+    <div class="absolute inset-0 bg-black/50"></div>
 
-  <a href="#contacto" class="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-lg font-bold backdrop-blur-sm shadow-lg">
-    Contáctanos
-  </a>
-  
+    <!-- Contenido centrado -->
+    <div class="relative z-10 text-center text-white px-4">
+        
+        <!-- Línea 1: Estilo Serif Cursivo -->
+        <p class="font-serif italic text-2xl md:text-3xl mb-4 drop-shadow-md">
+            30 años de experiencia
+        </p>
+
+        <!-- Línea 2: Estilo Sans-Serif, Mayúsculas y Espaciado -->
+        <h1 class="font-sans font-bold text-4xl md:text-6xl tracking-[0.2em] uppercase drop-shadow-xl mb-4">
+            GARANTIZAN CALIDAD
+        </h1>
+
+        <!-- Línea 3: Subtítulo (Bienvenido) -->
+        <p class="font-sans text-xl md:text-2xl mt-4 mb-10 drop-shadow-md">
+            Bienvenido a Pronalfrut
+        </p>
+
+        <!-- Botones -->
+        <!-- Ajustamos mt-16 a mt-40 para bajar los botones drásticamente -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-40">
+    <a href="#productos" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md transition">
+        Ver Productos
+    </a>
+    <a href="#contacto" class="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-md transition">
+        Contáctanos
+    </a>
 </div>
 
-  </div>
+        <!-- Línea 4: Cursiva inferior -->
+        <p class="font-serif italic text-lg mt-16 drop-shadow-md">
+            
+        </p>
+    </div>
 </section>
+
+
+
+
 
 
 

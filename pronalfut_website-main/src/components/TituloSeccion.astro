@@ -1,0 +1,15 @@
+---
+// src/components/TituloSeccion.astro
+interface Props {
+  texto: string;
+}
+
+const { texto } = Astro.props;
+
+// Esto convierte automáticamente la primera letra en mayúscula
+const tituloFormateado = texto.charAt(0).toUpperCase() + texto.slice(1);
+---
+
+<h2 class="text-4xl font-bold text-green-800 text-center my-10 capitalize">
+  {tituloFormateado}
+</h2>

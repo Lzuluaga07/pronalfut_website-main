@@ -13,16 +13,19 @@ import Footer from '../components/Footer.astro';
 
 
 <MainLayout title="Alimentos Pronalfrut - Inicio">
-   <Navbar /> <main>
+    <Navbar /> 
+    <main>
         <Hero />
-    </div class="mt-12">
-        <VideoHero />
+        <!-- Corrección: abrimos el div correctamente aquí -->
+        <div class="mt-4">
+            <VideoHero />
+        </div>
         <Nosotros />
         <Productos />
         
         <!-- Modificamos el título a formato oración según pidió Natalie -->
         <TextBlock 
-            title="Nuestro compromiso con la calidad" 
+            title="compromiso de calidad" 
             paragraph="En Alimentos Pronalfrut nos dedicamos a procesar y comercializar pulpa de fruta natural de alta calidad. En Alimentos Pronalfrut, transformamos la riqueza del campo en soluciones saludables."
         />
         
@@ -33,5 +36,7 @@ import Footer from '../components/Footer.astro';
     </main>
     <Footer />
 </MainLayout>
+
+
 
 

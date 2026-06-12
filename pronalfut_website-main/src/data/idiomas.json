@@ -7,27 +7,32 @@
       "blog": "Blog",
       "contacto": "Contacto"
     },
+    "hero": {
+      "title": "Alimentos Pronalfrut",
+      "subtitle": "30 años de experiencia..."
+    },
     "nosotros": {
       "titulo": "Quiénes somos",
-      "descripcion": "Somos una empresa dedicada a la producción y comercialización de pulpa de fruta natural de alta calidad. En Alimentos Pronalfrut, transformamos la riqueza del campo en soluciones saludables.",
+      "descripcion": "Somos una empresa dedicada a la producción y comercialización de pulpa de fruta natural de alta calidad.",
       "misionTitulo": "Misión",
-      "misionTexto": "Dedicado al desarrollo, producción y mercadeo de productos elaborados a partir de frutas, para satisfacer los gustos y necesidades de los consumidores, a través de acciones de calidad.",
+      "misionTexto": "Dedicado al desarrollo, producción y mercadeo de productos elaborados a partir de frutas.",
       "visionTitulo": "Visión",
-      "visionTexto": "Ser la empresa líder en el mercado nacional de pulpas de fruta congeladas, reconocida por la excelencia de sus productos, la innovación en sus procesos y el compromiso con el desarrollo."
+      "visionTexto": "Ser la empresa líder en el mercado nacional de pulpas de fruta."
     },
     "productos": {
+      "tituloProductos": "Nuestros Productos",
       "beneficio": "Beneficio:",
       "tip_saludable": "Tip Saludable:",
       "ver_mas": "Ver más",
       "ver_menos": "Ver menos"
     },
     "contacto": {
-      "titulo": "Contactanos",
-      "subtitulo": "",
+      "titulo": "Contáctanos",
+      "subtitulo": "¡Estamos aquí para ayudarte!",
       "placeholderNombre": "Nombre"
     },
     "footer": {
-      "descripcion": "Más de 30 años de experiencia comprometidos con la calidad natural y el procesamiento de los mejores frutos del campo colombiano.",
+      "descripcion": "Más de 30 años de experiencia comprometidos con la calidad natural.",
       "navTitulo": "Navegación",
       "navInicio": "Inicio",
       "navNosotros": "Nosotros",
@@ -46,15 +51,20 @@
       "blog": "Blog",
       "contacto": "Contact"
     },
+    "hero": {
+      "title": "Alimentos Pronalfrut",
+      "subtitle": "30 years of experience..."
+    },
     "nosotros": {
       "titulo": "About Us",
-      "descripcion": "At Alimentos Pronalfrut, we process and distribute the highest quality frozen fruit pulps, preserving their natural flavor, nutrients, and freshness for global markets.",
+      "descripcion": "We are a company dedicated to the production and marketing of high-quality natural fruit pulp.",
       "misionTitulo": "Mission",
-      "misionTexto": "Dedicated to the development, production, and marketing of fruit-based products, to satisfy the tastes and needs of consumers through quality, service, and efficiency.",
+      "misionTexto": "Dedicated to the development, production, and marketing of fruit-based products.",
       "visionTitulo": "Vision",
-      "visionTexto": "To be a leading Colombian company in the production of natural frozen fruit pulps, recognized for excellence, innovation, and commitment to development."
+      "visionTexto": "To be the leading company in the national fruit pulp market."
     },
     "productos": {
+      "tituloProductos": "Our Products",
       "beneficio": "Benefit:",
       "tip_saludable": "Healthy Tip:",
       "ver_mas": "See more",
@@ -62,11 +72,11 @@
     },
     "contacto": {
       "titulo": "Contact Us",
-      "subtitulo": "Get in touch with us!",
+      "subtitulo": "We are here to help!",
       "placeholderNombre": "Name"
     },
     "footer": {
-      "descripcion": "More than 30 years of experience committed to natural quality and the processing of the best fruits from the Colombian countryside.",
+      "descripcion": "Over 30 years of experience committed to natural quality.",
       "navTitulo": "Navigation",
       "navInicio": "Home",
       "navNosotros": "About Us",
@@ -78,6 +88,3 @@
     }
   }
 }
-
-
-

@@ -12,6 +12,7 @@ import Footer from '../../components/Footer.astro';
 <MainLayout title="Pronalfrut - International">
   <Navbar />
   <main>
+    <Hero />  
     <VideoHero />
     <Nosotros />
     <Productos />
@@ -21,6 +22,20 @@ import Footer from '../../components/Footer.astro';
     <Contacto />
   </main>
   <Footer />
+  <script is:inline>
+  // Bloquea cualquier intento de scroll durante la carga
+  window.addEventListener('beforeunload', () => {
+    sessionStorage.setItem('scrollPosition', '0');
+  });
+
+  window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+    // Asegura que no se mueva después de 100ms
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  });
+</script>
 </MainLayout>
 
 

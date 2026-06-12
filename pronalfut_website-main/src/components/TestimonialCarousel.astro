@@ -1,4 +1,5 @@
 ---
+import TituloSeccion from './TituloSeccion.astro';
 interface Testimonial {
   quote: string;
   author: string;
@@ -20,10 +21,8 @@ const {
 <section class="relative overflow-hidden bg-[#f5f5f5] px-6 py-16" id="testimonios">
   <div class="container mx-auto max-w-7xl">
     
-    <!-- Título de la Sección -->
-    <h2 class="mb-10 text-center text-3xl md:text-5xl font-extrabold tracking-tight text-green-800">
-      {title}
-    </h2>
+   
+    <TituloSeccion texto={title} />
 
     <!-- Mensaje Temporal (Hasta que Natalie confirme el listado) -->
     <div class="text-center text-gray-600 italic py-12 bg-white rounded-2xl shadow-sm max-w-2xl mx-auto">

@@ -1,5 +1,6 @@
 ---
 import traducciones from '../data/idiomas.json';
+import TituloSeccion from './TituloSeccion.astro';
 
 const esIngles = Astro.url.pathname.startsWith('/en');
 const idioma = esIngles ? 'en' : 'es';
@@ -9,8 +10,7 @@ const t = traducciones[idioma].contacto;
 
 <section id="contacto" class="py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl md:text-5xl font-bold text-center text-green-800 mb-8">
-      {t.titulo}
+    <TituloSeccion texto={t.titulo} />
     </h2>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">

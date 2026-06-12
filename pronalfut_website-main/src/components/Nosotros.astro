@@ -1,9 +1,13 @@
 ---
 import traducciones from '../data/idiomas.json';
-const esIngles = Astro.url.pathname.startsWith('/en/');
+import TituloSeccion from './TituloSeccion.astro';
+const esIngles = Astro.url.pathname.startsWith('/en');
 const idioma = esIngles ? 'en' : 'es';
-const t = traducciones[idioma].nosotros;
+
+// Esta línea le dice a TypeScript exactamente qué tiene 't'
+const t: any = traducciones[idioma].nosotros;
 ---
+
 
 <section class="py-20 bg-gray-50" id="nosotros">
   <div class="container mx-auto px-6">
@@ -19,18 +23,21 @@ const t = traducciones[idioma].nosotros;
 
     <div class="grid md:grid-cols-2 gap-8">
       
-      <div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100">
-        <h3 class="text-2xl font-bold text-purple-900 mb-4 flex items-center gap-2">
-          🎯 {t.misionTitulo}
-        </h3>
-        <p class="text-gray-700 text-lg leading-relaxed">
-          {t.misionTexto}
-        </p>
-      </div>
+    <!-- Misión -->
+<div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100">
+    <TituloSeccion texto={t.misionTitulo} />
+    <p class="text-gray-700 text-lg leading-relaxed text-center">
+        {t.misionTexto}
+    </p>
+</div>
 
-      <div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100">
-        <h3 class="text-2xl font-bold text-purple-900 mb-4 flex items-center gap-2">
-          🚀 {t.visionTitulo}
+<!-- Visión -->
+<div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100">
+    <TituloSeccion texto={t.visionTitulo} />
+    <p class="text-gray-700 text-lg leading-relaxed text-center">
+        {t.visionTexto}
+    </p>
+</div>  
         </h3>
         <p class="text-gray-700 text-lg leading-relaxed">
           {t.visionTexto}
