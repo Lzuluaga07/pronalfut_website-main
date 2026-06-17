@@ -10,41 +10,37 @@ const t: any = traducciones[idioma].nosotros;
 
 
 <section class="py-20 bg-gray-50" id="nosotros">
-  <div class="container mx-auto px-6">
-    
-    <div class="max-w-4xl mx-auto mb-16 p-10 bg-white rounded-3xl shadow-lg border border-gray-100 text-center">
-      <h2 class="text-3xl font-bold text-purple-900 mb-6 tracking-wide">
-        {t.titulo}
-      </h2>
-      <p class="text-xl text-gray-700 leading-relaxed">
-        {t.descripcion}
-      </p>
-    </div>
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto mb-16 p-10 bg-white rounded-3xl shadow-lg border border-gray-100">
+            <h2 class="text-3xl font-bold text-purple-900 mb-6 tracking-wide text-center">
+                {t.titulo}
+            </h2>
+            <!-- Agregué text-justify aquí -->
+            <p class="text-xl text-gray-700 leading-relaxed text-justify">
+                {t.descripcion}
+            </p>
+        </div>
 
-    <div class="grid md:grid-cols-2 gap-8">
-      
-    <!-- Misión -->
-<div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100">
-    <TituloSeccion texto={t.misionTitulo} />
-    <p class="text-gray-700 text-lg leading-relaxed text-center">
-        {t.misionTexto}
-    </p>
-</div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Misión -->
+            <div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100">
+                <TituloSeccion texto="Misión" />
+                <!-- Cambié text-center por text-justify aquí -->
+                <p class="text-gray-700 text-lg leading-relaxed text-justify">
+                    {t.misionTexto}
+                </p>
+            </div>
 
-<!-- Visión -->
-<div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100">
-    <TituloSeccion texto={t.visionTitulo} />
-    <p class="text-gray-700 text-lg leading-relaxed text-center">
-        {t.visionTexto}
-    </p>
-</div>  
-        </h3>
-        <p class="text-gray-700 text-lg leading-relaxed">
-          {t.visionTexto}
-        </p>
-      </div>
+            <!-- Visión -->
+            <div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100">
+                <TituloSeccion texto="Visión" />
+                <!-- Cambié text-center por text-justify aquí -->
+                <p class="text-gray-700 text-lg leading-relaxed text-justify">
+                    {t.visionTexto}
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 

@@ -1,42 +1,39 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import Navbar from '../../components/Navbar.astro';
+import Hero from '../../components/Hero.astro';
 import VideoHero from '../../components/VideoHero.astro';
 import Nosotros from '../../components/Nosotros.astro';
 import Productos from '../../components/Productos.astro';
 import TextBlock from '../../components/TextBlock.astro';
+import TestimonialCarousel from '../../components/TestimonialCarousel.astro';
 import Contacto from '../../components/Contacto.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<MainLayout title="Pronalfrut - International">
-  <Navbar />
-  <main>
-    <Hero />  
-    <VideoHero />
-    <Nosotros />
-    <Productos />
-    <TextBlock title="Our Commitment to Quality" 
-  paragraph="At Alimentos Pronalfrut, we process and distribute the highest quality frozen fruit pulps, preserving their natural flavor, nutrients, and freshness for global markets." 
-/> 
-    <Contacto />
-  </main>
-  <Footer />
-  <script is:inline>
-  // Bloquea cualquier intento de scroll durante la carga
-  window.addEventListener('beforeunload', () => {
-    sessionStorage.setItem('scrollPosition', '0');
-  });
-
-  window.addEventListener('load', () => {
-    window.scrollTo(0, 0);
-    // Asegura que no se mueva después de 100ms
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100);
-  });
-</script>
+<MainLayout title="Alimentos Pronalfrut - Home">
+    <Navbar />
+    <main>
+        <Hero />
+        <div class="mt-4">
+            <VideoHero />
+        </div>
+        <Nosotros />
+        <Productos />
+        <TextBlock 
+            title="Commitment to quality" 
+            paragraph="At Alimentos Pronalfrut we are dedicated to processing" 
+        />
+       <TestimonialCarousel 
+    title="Our Clients" 
+    message="Coming soon you will know the opinions of the companies that trust us." 
+/>
+        <Contacto />
+    </main>
+    <Footer />
 </MainLayout>
+
+
 
 
 

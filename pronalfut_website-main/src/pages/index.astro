@@ -11,32 +11,24 @@ import Contacto from '../components/Contacto.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-
 <MainLayout title="Alimentos Pronalfrut - Inicio">
-    <Navbar /> 
+    <Navbar />
     <main>
-        <Hero />
-        <!-- Corrección: abrimos el div correctamente aquí -->
-        <div class="mt-4">
+      <Hero /> 
             <VideoHero />
-        </div>
         <Nosotros />
         <Productos />
-        
-        <!-- Modificamos el título a formato oración según pidió Natalie -->
-        <TextBlock 
-            title="compromiso de calidad" 
-            paragraph="En Alimentos Pronalfrut nos dedicamos a procesar y comercializar pulpa de fruta natural de alta calidad. En Alimentos Pronalfrut, transformamos la riqueza del campo en soluciones saludables."
-        />
-        
-        <!-- Insertamos la sección de clientes aquí antes de contacto -->
-        <TestimonialCarousel />
-        
-        <Contacto />
+
+       <TextBlock
+    title={t.nosotros.politicaTitulo}
+    paragraph={t.nosotros.politicaTexto}
+/>
+<TestimonialCarousel 
+    title={t.footer.navClientes} 
+    message="Próximamente conocerás las opiniones de las empresas que confían en nosotros." 
+/>
+<Contacto />
     </main>
     <Footer />
 </MainLayout>
-
-
-
 

@@ -9,73 +9,66 @@ const t = traducciones[idioma].footer;
 ---
 
 <footer id="contacto" class="bg-[#4c1d95] text-white py-12 mt-10">
- class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl"
-
-    
-    <div class="space-y-4">
-     <h3 class="text-2xl font-bold text-white tracking-tight">Alimentos Pronalfrut</h3> 
-      <p class="text-sm text-purple-200 font-semibold">NIT: 900436915</p>
-      <p class="text-purple-100 text-sm leading-relaxed">
-        {t.descripcion}
-      </p>
-    </div>
-
-    <div class="space-y-4">
-      <h3 class="text-xl font-bold border-b-2 border-green-500 w-fit pb-1">{t.navTitulo}</h3>
-      <ul class="space-y-2 text-purple-100 text-sm">
-        <li><a href="/" class="hover:text-green-400 transition-colors">{t.navInicio}</a></li>
-        <li><a href="#nosotros" class="hover:text-green-400 transition-colors">{t.navNosotros}</a></li>
-        <li><a href="#productos" class="hover:text-green-400 transition-colors">{t.navProductos}</a></li>
-        <li><a href="#testimonios" class="hover:text-green-400 transition-colors">{t.navClientes}</a></li>
-        <li><a href="/blog" class="hover:text-green-400 transition-colors">{t.navBlog}</a></li>
-      </ul>
-    </div>
-
-
-<div class="space-y-4 w-full md:col-span-3"> 
-  <h3 class="text-xl font-bold border-b-2 border-green-500 w-fit pb-1">{t.contactoTitulo}</h3>
-  <!-- ... resto de tu contenido ... -->
-</div>
-      <!-- Datos de Contacto -->
-      <div class="space-y-2 text-purple-100 text-sm">
-        <div class="flex items-start gap-3">
-          <span class="material-symbols-outlined">location_on</span>
-          <p>Cra. 64A # 4B-41, Bogotá, Colombia</p>
-        </div>
-        <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined">call</span>
-          <p>601 420 2730</p>
-        </div>
-        <div class="flex items-center gap-3">
-          
-          <span class="material-symbols-outlined">mail</span>
-          <p><a href="mailto:sales@pronalfrut.com" class="hover:text-white transition-colors">sales@pronalfrut.com</a></p>
-        </div>
-      </div>  
-
-    </div> 
-   
-    </div> 
-
-    <!-- NUEVO BLOQUE: MAPA Y REDES -->
-    <div class="container mx-auto px-6 mt-10">
-        <div class="w-full h-80 overflow-hidden rounded-lg shadow-md">
+    <!-- Contenedor con margen forzado a la izquierda -->
+    <div class="container mx-auto px-6 md:pl-48 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-screen-xl">
         
+        <!-- Bloque 1 -->
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold">Alimentos Pronalfrut</h3> 
+            <p class="text-sm text-purple-200 font-semibold">NIT: 900436915</p>
+            <p class="text-purple-100 text-sm">{t.descripcion}</p>
         </div>
-        <div class="flex justify-center gap-6 mt-6">
+
+        <!-- Bloque 2 -->
+        <div class="space-y-4">
+            <h3 class="text-xl font-bold border-b-2 border-green-500 w-fit pb-1">{t.navTitulo}</h3>
+            <ul class="space-y-2 text-purple-100 text-sm">
+                <li><a href="/" class="hover:text-green-400">Inicio</a></li>
+                <li><a href="#nosotros" class="hover:text-green-400">Nosotros</a></li>
+                <li><a href="#productos" class="hover:text-green-400">Productos</a></li>
+                <li><a href="#testimonios" class="hover:text-green-400">Nuestros clientes</a></li>
+            </ul>
+        </div>
+
+        <!-- Bloque 3 -->
+        <div class="space-y-4"> 
+            <h3 class="text-xl font-bold border-b-2 border-green-500 w-fit pb-1">{t.contactoTitulo}</h3>
+            <div class="text-purple-100 text-sm space-y-2">
+                <p>Cra. 64A # 4B-41, Bogotá</p>
+                <p>601 420 2730</p>
+                <p>sales@pronalfrut.com</p>
+            </div>
+        </div> 
+
+    </div> 
+    
+ <!-- Bloque inferior: Mapa y Redes -->
+    
+    <!-- Mapa: w-full asegura que ocupe todo el ancho -->
+    <div class="w-full mt-10">
+        <div class="w-full h-80 overflow-hidden shadow-md">
+       <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8304077998664!2d-74.12346192432554!3d4.624327995350392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99545f1fa85f%3A0x90eac8ae72c6e03f!2sAlimentos+Pronalfrut!5e0!3m2!1ses!2sco!4v1718635000000!5m2!1ses!2sco" 
+    width="100%" 
+    height="100%" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+</iframe>
+        </div>
+    </div>
+
+    <!-- Redes sociales: Mantienen su contenedor para estar centradas -->
+    <div class="container mx-auto px-6 mt-6">
+        <div class="flex justify-center gap-6">
             <a href="https://www.facebook.com/pronalfrut" target="_blank"><img src="/images/facebook.svg" alt="Facebook" class="w-10 h-10"></a>
             <a href="https://www.instagram.com/pronalfrut" target="_blank"><img src="/images/instagram.svg" alt="Instagram" class="w-10 h-10"></a>
         </div>
-    </div> 
-
-    
-     
-  <div class="w-full border-t border-purple-800 mt-10 pt-8">
-    <p class="text-center text-purple-300 text-xs px-4">
-      {currentYear} Alimentos Pronalfrut. {t.derechos.replace('© 2026 Alimentos Pronalfrut. ', '')}
-    </p>
-  </div>
+    </div>   
 </footer>
+
+
+
 
 
 

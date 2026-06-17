@@ -9,7 +9,8 @@ export default function ProductCard({ producto }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all p-5 flex flex-col h-full">
+        // Cambia la línea 11 de tu componente así:
+<div className="bg-orange-50 border border-orange-100 rounded-2xl shadow-sm hover:shadow-md transition-all p-5 flex flex-col h-full">
             {/* Imagen del Producto */}
             <div className="relative h-64 w-full overflow-hidden rounded-t-xl mb-4">
                 <img

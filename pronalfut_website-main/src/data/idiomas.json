@@ -12,13 +12,15 @@
       "subtitle": "30 años de experiencia..."
     },
     "nosotros": {
-      "titulo": "Quiénes somos",
-      "descripcion": "Somos una empresa dedicada a la producción y comercialización de pulpa de fruta natural de alta calidad.",
-      "misionTitulo": "Misión",
-      "misionTexto": "Dedicado al desarrollo, producción y mercadeo de productos elaborados a partir de frutas.",
-      "visionTitulo": "Visión",
-      "visionTexto": "Ser la empresa líder en el mercado nacional de pulpas de fruta."
-    },
+  "titulo": "Nuestra Empresa",
+  "descripcion": "Inspirados en los colores, olores y sabores de nuestra tierra, en 1997 un sueño se convierte en realidad, y nace Pronalfrut, compañía caracterizada por una labor productiva con excelente calidad, servicio, compromiso social y responsabilidad ambiental.\n\nPronalfrut elabora productos basados en frutas frescas, cuidadosamente seleccionadas y procesadas conservando el sabor, color, olor, textura y nutrición propios de la fruta.\n\nCada proceso de nuestra planta de producción, se diseña y desarrolla pensando en el deleite, la nutrición, la confianza y la satisfacción de nuestros consumidores.\n\nNuestra planta de producción se encuentra ubicada en la ciudad de Bogotá, capital de Colombia, hermoso país que cuenta con gran variedad de flora, fauna y climas, que ofrecen una amplia oferta de frutos nutritivos y deliciosos.",
+  "misionTitulo": "Misión",
+  "misionTexto": "Dedicada al desarrollo, producción y mercadeo de Productos elaborados a partir de Frutas, para satisfacer los gustos y necesidades de los consumidores, a través de acciones de calidad, servicio y eficiencia, con responsabilidad frente a los clientes, la sociedad, al medio ambiente y a los miembros que conforman nuestro equipo de trabajo.",
+  "visionTitulo": "Visión",
+  "visionTexto": "Ser una empresa colombiana líder en la producción de productos naturales a base fruta que satisfagan la demanda del mercado alimenticio, con el más alto nivel de Calidad y competitividad, destacándose nacional e internacionalmente en pro del desarrollo sostenible de Colombia y la conservación de la Ecología.",
+  "politicaTitulo": "Política de Calidad",
+  "politicaTexto": "Pronalfrut está dedicado a procesar y comercializar pulpa de fruta, fruta congelada y otros derivados, con la entrega oportuna y completa de productos de excelente calidad a precios competitivos garantizando la satisfacción del cliente, para ello cuenta con un equipo de trabajo idóneo que busca la mejora continua de nuestros procesos, la rentabilidad, liquidez de las operaciones y completa satisfacción de sus clientes."
+},
     "productos": {
       "tituloProductos": "Nuestros Productos",
       "beneficio": "Beneficio:",
@@ -56,13 +58,15 @@
       "subtitle": "30 years of experience..."
     },
     "nosotros": {
-      "titulo": "About Us",
-      "descripcion": "We are a company dedicated to the production and marketing of high-quality natural fruit pulp.",
-      "misionTitulo": "Mission",
-      "misionTexto": "Dedicated to the development, production, and marketing of fruit-based products.",
-      "visionTitulo": "Vision",
-      "visionTexto": "To be the leading company in the national fruit pulp market."
-    },
+  "titulo": "About Us",
+  "descripcion": "Inspired by the colors, aromas, and flavors of our land, in 1997 a dream became reality, and Pronalfrut was born...",
+  "misionTitulo": "Mission",
+  "misionTexto": "Dedicated to the development, production, and marketing of fruit-based products...",
+  "visionTitulo": "Vision",
+  "visionTexto": "To be the leading Colombian company in the production of natural fruit-based products...",
+  "politicaTitulo": "Quality Policy",
+  "politicaTexto": "Pronalfrut is dedicated to processing and marketing fruit pulp, frozen fruit, and other derivatives, with timely and complete delivery of excellent quality products at competitive prices, guaranteeing customer satisfaction. To this end, it has an ideal team seeking continuous improvement of our processes, profitability, liquidity of operations, and complete satisfaction of our clients."
+},
     "productos": {
       "tituloProductos": "Our Products",
       "beneficio": "Benefit:",
