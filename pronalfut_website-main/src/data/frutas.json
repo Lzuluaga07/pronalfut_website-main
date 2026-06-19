@@ -1,20 +1,22 @@
 [
-  {"id": 1, "nombre": "Pulpa de Fresa", "descripcion": "Pulpa natural seleccionada.", "imagen": "/images/productos/fresa.webp", "categoria": "Kilo"},
-  {"id": 2, "nombre": "Pulpa de Guanábana", "descripcion": "Pulpa de guanábana fresca.", "imagen": "/images/productos/guanabana.webp", "categoria": "Kilo"},
-  {"id": 3, "nombre": "Pulpa de Guayaba", "descripcion": "Pulpa natural de guayaba.", "imagen": "/images/productos/guayaba.webp", "categoria": "Kilo"},
-  {"id": 4, "nombre": "Pulpa de Limón", "descripcion": "Pulpa concentrada de limón.", "imagen": "/images/productos/limon.webp", "categoria": "Kilo"},
-  {"id": 5, "nombre": "Pulpa de Lulo", "descripcion": "Pulpa de lulo ideal para jugos.", "imagen": "/images/productos/lulo.webp", "categoria": "Kilo"},
-  {"id": 6, "nombre": "Pulpa de Mandarina", "descripcion": "Pulpa natural de mandarina.", "imagen": "/images/productos/mandarina.webp", "categoria": "Kilo"},
-  {"id": 7, "nombre": "Pulpa de Mango", "descripcion": "Pulpa dulce de mango.", "imagen": "/images/productos/mango.webp", "categoria": "Kilo"},
-  {"id": 8, "nombre": "Pulpa de Maracuyá", "descripcion": "Pulpa ácida de maracuyá.", "imagen": "/images/productos/maracuya.webp", "categoria": "Kilo"},
-  {"id": 9, "nombre": "Pulpa de Mora", "descripcion": "Pulpa natural de mora.", "imagen": "/images/productos/mora.webp", "categoria": "Kilo"},
-  {"id": 10, "nombre": "Pulpa de Naranja", "descripcion": "Pulpa natural de naranja.", "imagen": "/images/productos/naranja.webp", "categoria": "Kilo"},
-  {"id": 11, "nombre": "Pulpa de Papaya", "descripcion": "Pulpa natural de papaya.", "imagen": "/images/productos/papaya.webp", "categoria": "Kilo"},
-  {"id": 12, "nombre": "Pulpa de Piña", "descripcion": "Pulpa natural de piña.", "imagen": "/images/productos/pina.webp", "categoria": "Kilo"},
-  {"id": 13, "nombre": "Pulpa de Tamarindo", "descripcion": "Pulpa natural de tamarindo.", "imagen": "/images/productos/tamarindo.webp", "categoria": "Kilo"},
-  {"id": 14, "nombre": "Pulpa de Tomate de Árbol", "descripcion": "Pulpa de tomate de árbol.", "imagen": "/images/productos/tomate.webp", "categoria": "Kilo"},
-  {"id": 15, "nombre": "Pulpa de Uva", "descripcion": "Pulpa de uva seleccionada.", "imagen": "/images/productos/uva.webp", "categoria": "Kilo"}
+  {"id": 1, "nombre": "Strawberry Pulp", "descripcion": "Selected natural strawberry pulp.", "beneficio": "Rich in antioxidants and Vitamin C.", "tip": "Ideal for desserts and smoothies.", "imagen": "/images/productos/fresa.webp", "categoria": "Kilo"},
+  {"id": 2, "nombre": "Soursop Pulp", "descripcion": "Fresh soursop pulp.", "beneficio": "Supports immune system health.", "tip": "Perfect for refreshing drinks.", "imagen": "/images/productos/guanabana.webp", "categoria": "Kilo"},
+  {"id": 3, "nombre": "Guava Pulp", "descripcion": "Natural guava pulp.", "beneficio": "High in fiber and digestion aid.", "tip": "Excellent for sauces and juices.", "imagen": "/images/productos/guayaba.webp", "categoria": "Kilo"},
+  {"id": 4, "nombre": "Lemon Pulp", "descripcion": "Concentrated lemon pulp.", "beneficio": "Great source of Vitamin C.", "tip": "Use for dressings or detox water.", "imagen": "/images/productos/limon.webp", "categoria": "Kilo"},
+  {"id": 5, "nombre": "Lulo Pulp", "descripcion": "Lulo pulp, ideal for juices.", "beneficio": "Refreshing and energizing.", "tip": "Classic Colombian juice.", "imagen": "/images/productos/lulo.webp", "categoria": "Kilo"},
+  {"id": 6, "nombre": "Mandarin Pulp", "descripcion": "Natural mandarin pulp.", "beneficio": "Boosts immune defense.", "tip": "Great for quick refreshment.", "imagen": "/images/productos/mandarina.webp", "categoria": "Kilo"},
+  {"id": 7, "nombre": "Mango Pulp", "descripcion": "Sweet mango pulp.", "beneficio": "Rich in Vitamin A and E.", "tip": "Delicious in yogurt or ice cream.", "imagen": "/images/productos/mango.webp", "categoria": "Kilo"},
+  {"id": 8, "nombre": "Passion Fruit Pulp", "descripcion": "Tart passion fruit pulp.", "beneficio": "Natural calming effect.", "tip": "Best for concentrated juices.", "imagen": "/images/productos/maracuya.webp", "categoria": "Kilo"},
+  {"id": 9, "nombre": "Blackberry Pulp", "descripcion": "Natural blackberry pulp.", "beneficio": "High antioxidant content.", "tip": "Great for natural jams.", "imagen": "/images/productos/mora.webp", "categoria": "Kilo"},
+  {"id": 10, "nombre": "Orange Pulp", "descripcion": "Natural orange pulp.", "beneficio": "Supports heart health.", "tip": "Essential for morning nutrition.", "imagen": "/images/productos/naranja.webp", "categoria": "Kilo"},
+  {"id": 11, "nombre": "Papaya Pulp", "descripcion": "Natural papaya pulp.", "beneficio": "Promotes digestive health.", "tip": "Good for smoothies.", "imagen": "/images/productos/papaya.webp", "categoria": "Kilo"},
+  {"id": 12, "nombre": "Pineapple Pulp", "descripcion": "Natural pineapple pulp.", "beneficio": "Anti-inflammatory properties.", "tip": "Pairs well with spicy dishes.", "imagen": "/images/productos/pina.webp", "categoria": "Kilo"},
+  {"id": 13, "nombre": "Tamarind Pulp", "descripcion": "Natural tamarind pulp.", "beneficio": "Digestive aid.", "tip": "Used in exotic culinary recipes.", "imagen": "/images/productos/tamarindo.webp", "categoria": "Kilo"},
+  {"id": 14, "nombre": "Tree Tomato Pulp", "descripcion": "Tree tomato pulp.", "beneficio": "Rich in minerals.", "tip": "Delicious as a creamy drink.", "imagen": "/images/productos/tomate.webp", "categoria": "Kilo"},
+  {"id": 15, "nombre": "Grape Pulp", "descripcion": "Selected grape pulp.", "beneficio": "Heart and brain health.", "tip": "Great for natural sorbets.", "imagen": "/images/productos/uva.webp", "categoria": "Kilo"}
 ]
+
+
 
 
 

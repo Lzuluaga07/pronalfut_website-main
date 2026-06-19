@@ -29,11 +29,12 @@ export default function ProductCard({ producto }) {
             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="border-t border-orange-100 pt-4 mt-2">
                     <p className="text-gray-700 text-sm mb-3">
-                        <span className="font-bold text-orange-600">{t.beneficio}</span> {producto.propiedades}
+                        <span className="font-bold text-orange-600">{t.beneficio} {producto.beneficio}
+                        {producto.beneficio === 'Vitamin C' ? ']' : ']'}</span> - {producto.descripcion}    
                     </p>
                     <div className="bg-orange-50 p-3 rounded-lg">
                         <p className="text-xs text-orange-800 italic">
-                            <span className="font-bold">{t.tip_saludable}</span> {producto.remedio}
+                            <span className="font-bold">{t.tip_saludable} {producto.tip_saludable}</span>
                         </p>
                     </div>
                 </div>
