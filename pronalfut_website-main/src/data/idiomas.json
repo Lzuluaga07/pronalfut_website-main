@@ -26,7 +26,15 @@
       "beneficio": "Beneficio:",
       "tip_saludable": "Tip Saludable:",
       "ver_mas": "Ver más",
-      "ver_menos": "Ver menos"
+      "ver_menos": "Ver menos",
+      "nombres": {
+        "naranja": "Naranja",
+        "guanabana": "Guanábana",
+        "borojo": "Borojó",
+        "curuba": "Curuba",
+        "fresa": "Fresa",
+        "guayaba": "Guayaba"
+      }
     },
     "contacto": {
       "titulo": "Contáctanos",
@@ -72,7 +80,15 @@
       "beneficio": "Benefit:",
       "tip_saludable": "Healthy Tip:",
       "ver_mas": "See more",
-      "ver_menos": "See less"
+      "ver_menos": "See less",
+      "nombres": {
+        "naranja": "Orange",
+        "guanabana": "Soursop",
+        "borojo": "Borojo",
+        "curuba": "Curuba",
+        "fresa": "Strawberry",
+        "guayaba": "Guava"
+      }
     },
     "contacto": {
       "titulo": "Contact Us",
@@ -92,6 +108,3 @@
     }
   }
 }
-
-
-

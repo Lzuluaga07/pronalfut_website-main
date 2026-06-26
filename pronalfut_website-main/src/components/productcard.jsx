@@ -8,9 +8,11 @@ export default function ProductCard({ producto }) {
     
     const [isOpen, setIsOpen] = useState(false);
 
+    // Normalizamos el nombre para buscarlo siempre en minúsculas
+    const claveNombre = producto.nombre.toLowerCase();
+
     return (
-        // Cambia la línea 11 de tu componente así:
-<div className="bg-orange-50 border border-orange-100 rounded-2xl shadow-sm hover:shadow-md transition-all p-5 flex flex-col h-full">
+        <div className="bg-orange-50 border border-orange-100 rounded-2xl shadow-sm hover:shadow-md transition-all p-5 flex flex-col h-full">
             {/* Imagen del Producto */}
             <div className="relative h-64 w-full overflow-hidden rounded-t-xl mb-4">
                 <img
@@ -19,22 +21,27 @@ export default function ProductCard({ producto }) {
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                 />
                 <div className="absolute top-3 right-3 bg-white/90 p-2 rounded-full shadow-md text-xl">
-                    {producto.nombre.includes('Naranja') ? '🍊' : '❄️'}
+                   {claveNombre === 'naranja' ? '🍊' : '❄️'}
                 </div>
             </div>
+   <h3 className="text-xl font-bold text-gray-800 mb-1">
+  {t.nombres && t.nombres[producto.nombre.toLowerCase()] 
+    ? t.nombres[producto.nombre.toLowerCase()] 
+    : producto.nombre}
+</h3>
 
-            <h3 className="text-xl font-bold text-gray-800 mb-1">{producto.nombre}</h3>
+            
+            
             <p className="text-gray-500 text-sm mb-4">Alimentos Pronalfrut</p>
 
             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="border-t border-orange-100 pt-4 mt-2">
                     <p className="text-gray-700 text-sm mb-3">
-                        <span className="font-bold text-orange-600">{t.beneficio} {producto.beneficio}
-                        {producto.beneficio === 'Vitamin C' ? ']' : ']'}</span> - {producto.descripcion}    
+                        <span className="font-bold text-orange-600">{t.beneficio}</span> {producto.beneficio}
                     </p>
                     <div className="bg-orange-50 p-3 rounded-lg">
                         <p className="text-xs text-orange-800 italic">
-                            <span className="font-bold">{t.tip_saludable} {producto.tip_saludable}</span>
+                            <span className="font-bold">{t.tip_saludable}</span> {producto.tip_saludable}
                         </p>
                     </div>
                 </div>

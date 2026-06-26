@@ -1,47 +1,52 @@
 ---
 import traducciones from '../data/idiomas.json';
 import TituloSeccion from './TituloSeccion.astro';
+
 const esIngles = Astro.url.pathname.startsWith('/en');
 const idioma = esIngles ? 'en' : 'es';
-
-// Esta línea le dice a TypeScript exactamente qué tiene 't'
-const t: any = traducciones[idioma].nosotros;
+const t: any = traducciones[idioma]; 
 ---
-
 
 <section class="py-20 bg-gray-50" id="nosotros">
     <div class="container mx-auto px-6">
         <div class="max-w-4xl mx-auto mb-16 p-10 bg-white rounded-3xl shadow-lg border border-gray-100">
             <h2 class="text-3xl font-bold text-purple-900 mb-6 tracking-wide text-center">
-                {t.titulo}
+                {t.nosotros.titulo}
             </h2>
-            <!-- Agregué text-justify aquí -->
             <p class="text-xl text-gray-700 leading-relaxed text-justify">
-                {t.descripcion}
+                {t.nosotros.descripcion}
             </p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Misión -->
             <div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100">
-                <TituloSeccion texto="Misión" />
-                <!-- Cambié text-center por text-justify aquí -->
-                <p class="text-gray-700 text-lg leading-relaxed text-justify">
-                    {t.misionTexto}
+                <TituloSeccion texto={String(t.nosotros.misionTitulo)} />
+                <p class="text-gray-700 text-lg leading-relaxed text-justify mt-4">
+                    {t.nosotros.misionTexto}
                 </p>
             </div>
 
             <!-- Visión -->
             <div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100">
-                <TituloSeccion texto="Visión" />
-                <!-- Cambié text-center por text-justify aquí -->
-                <p class="text-gray-700 text-lg leading-relaxed text-justify">
-                    {t.visionTexto}
+                <TituloSeccion texto={String(t.nosotros.visionTitulo)} />
+                <p class="text-gray-700 text-lg leading-relaxed text-justify mt-4">
+                    {t.nosotros.visionTexto}
+                </p>
+            </div>
+
+            <!-- Política de Calidad -->
+            <div class="p-10 rounded-3xl bg-white shadow-lg border border-gray-100 md:col-span-2">
+                <TituloSeccion texto={String(t.nosotros.politicaTitulo)} />
+                <p class="text-gray-700 text-lg leading-relaxed text-justify mt-4">
+                    {t.nosotros.politicaTexto}
                 </p>
             </div>
         </div>
     </div>
 </section>
+
+
 
 
 

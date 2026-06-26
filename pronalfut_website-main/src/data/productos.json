@@ -1,19 +1,49 @@
 [
   {
     "id": 1,
-    "nombre": "Naranja",
+    "nombre": "naranja",
     "propiedades": "Alta en Vitamina C, antioxidante y fortalece el sistema inmunológico.",
     "imagen": "../images/naranja.webp",
     "remedio": "Infusión de cáscara con miel para aliviar la tos y la congestión."
   },
   {
     "id": 2,
-    "nombre": "Guanábana",
+    "nombre": "guanabana",
     "propiedades": "Rica en fibra, potasio y conocida por sus propiedades antiinflamatorias.",
     "imagen": "../images/guanabana.webp",
     "remedio": "Batido con agua para ayudar a regular la digestión y mejorar el sueño."
+  },
+
+{
+    "id": 3,
+    "nombre": "borojó",
+    "propiedades": "Gran fuente de energía y fibra para la digestión.",
+    "imagen": "../images/borojo.webp",
+    "remedio": "Licúa con leche de almendras y canela; energía total para combatir la fatiga."
+  },
+  {
+    "id": 4,
+    "nombre": "curuba",
+    "propiedades": "Rica en vitamina C, combate el estrés oxidativo.",
+    "imagen": "../images/curuba.webp",
+    "remedio": "Licúa con agua fría, cuela y toma; reduce el estrés y relaja el cuerpo."
+  },
+  {
+    "id": 5,
+    "nombre": "fresa",
+    "propiedades": "Aporta fibra dietaria, hierro y vitamina C.",
+    "imagen": "../images/fresa.webp",
+    "remedio": "Licúa con agua y un toque de menta; antioxidante que embellece tu piel."
+  },
+  {
+    "id": 6,
+    "nombre": "guayaba",
+    "propiedades": "Excelente fuente de vitamina C y licopeno.",
+    "imagen": "../images/guayaba.webp",
+    "remedio": "Licúa con agua, cuela y disfruta; escudo natural para subir tus defensas."
   }
 ]
+
 
 
 
