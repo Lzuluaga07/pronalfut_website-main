@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 22
           cache: 'npm'
-          cache-dependency-path: ./pronalfut_website-main/package-lock.json
+          cache-dependency-path: package-lock.json
       # ----------------------------------------------------
 
       - name: Instalación de dependencias
@@ -33,10 +33,10 @@ jobs:
       - name: Despliegue a Netlify
         uses: nwtgck/actions-netlify@v2
         with:
-          publish-dir: './pronalfut_website-main/dist'
+          publish-dir: ./dist
           production-deploy: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          netlify-config-path: ./pronalfut_website-main/netlify.toml
+          netlify-config-path: netlify.toml
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
